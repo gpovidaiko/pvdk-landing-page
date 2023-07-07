@@ -1,0 +1,29 @@
+body {
+	background-color: #b7b7b7;
+	animation-name: intro-background-color;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+}
+
+#pvdk-stamp {
+	width: 8px;
+	position: absolute;
+	left: 0.15rem;
+	bottom: 0.15rem;
+	animation-name: intro-pvdk-stamp;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+}
+
+@keyframes intro-background-color {
+	from {
+		background-color: #ffffff;
+	}
+}
+
+@keyframes intro-pvdk-stamp {
+	from {
+		opacity: 0;
+		transform: translate(0, 8px);
+	}
+}
