@@ -1,0 +1,8 @@
+<svg width="114" height="121" viewBox="0 0 114 121" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="../style.css" type="text/css" />
+	<g id="orb">
+		<circle id="outter-ring" cx="57" cy="60" r="50" stroke="var(--primary-color)" stroke-width="5" stroke-miterlimit="16" />
+		<circle id="inner-circle" cx="57" cy="60" r="20" fill="var(--primary-color)" />
+		<circle id="orbit-circle" cx="57" cy="10" r="10" fill="var(--primary-color)" />
+	</g>
+</svg>
