@@ -12,7 +12,32 @@ body {
 	animation-timing-function: ease-out;
 }
 
+a {
+	text-decoration: none;
+}
+
+main {
+	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
+}
+
+section {
+	background-color: rgba(var(--primary-color-raw), .975);
+	color: var(--secondary-color);
+	text-align: center;
+	box-sizing: border-box;
+	padding: 1rem;
+	opacity: .25;
+}
+
+section.section--active {
+	opacity: 1;
+}
+
 #orb-stamp-container {
+	position: absolute;
+	z-index: -1;
 	display: flex;
 	align-items: center;
 	justify-content: center;
