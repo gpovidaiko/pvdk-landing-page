@@ -1,0 +1,31 @@
+@font-face {
+	src: url('pvdk_font.woff2') format('woff');
+	font-family: 'pvdk_font';
+}
+
+*[class^="pf-"] {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	font-family: pvdk_font, monospace;
+}
+  
+.pf-menu:before {
+	content: "\e000";
+}
+
+.pf-close:before {
+	content: "\e001";
+}
+
+.pf-circle:before {
+	content: "\e002";
+}
+
+.pf-orb:before {
+	content: "\e003";
+}

@@ -1,15 +1,28 @@
-:root {
-	--primary-color: #202020; /* #55ff00; */
-	--secondary-color: #e0e0e0; /* #180018; */ /* #b7b7b7; */
+@import url('root.css');
+
+/* ----- ----- ----- ----- ----- ----- ----- ----- */
+/*                                           geral */
+
+* {
+	margin: 0;
+	color: inherit;
+	font-family: inherit;
 }
 
 body {
-	margin: 0;
 	overflow: hidden;
 	background-color: var(--secondary-color);
 	animation-name: intro-background-color;
 	animation-duration: 1.5s;
 	animation-timing-function: ease-out;
+	color: var(--secondary-color);
+	font-family: var(--primary-font);
+}
+
+@keyframes intro-background-color {
+	from {
+		background-color: #000000; /* #ffffff; */
+	}
 }
 
 a {
@@ -34,6 +47,11 @@ section {
 section.section--active {
 	opacity: 1;
 }
+/*                                              // */
+/* ----- ----- ----- ----- ----- ----- ----- ----- */
+
+/* ----- ----- ----- ----- ----- ----- ----- ----- */
+/*                                           logos */
 
 #orb-stamp-container {
 	position: absolute;
@@ -41,6 +59,10 @@ section.section--active {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
 	width: 100vw;
 	height: 100vh;
 	filter: drop-shadow(0 0 0.5rem var(--primary-color));
@@ -65,12 +87,6 @@ section.section--active {
 	filter: drop-shadow(0 0 0.25rem var(--primary-color));
 }
 
-@keyframes intro-background-color {
-	from {
-		background-color: #000000; /* #ffffff; */
-	}
-}
-
 @keyframes intro-orb-stamp {
 	from {
 		opacity: 0;
@@ -84,3 +100,6 @@ section.section--active {
 		transform: translate(0, 4rem);
 	}
 }
+
+/*                                              // */
+/* ----- ----- ----- ----- ----- ----- ----- ----- */
