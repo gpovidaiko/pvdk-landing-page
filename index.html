@@ -5,10 +5,30 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>&gt; PVDK</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="assets/icons/pvdk_font.css">
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/nav/nav.css">
 </head>
 <body>
-	
+	<header>
+		<nav class="nav">
+			<a href="#home" class="home__link"><i class="pf-circle"></i></a>
+
+			<ul class="nav__list">
+				<li class="nav__item"><a href="#sobre-mim" class="nav__link">Sobre mim</a></li>
+				<li class="nav__item"><a href="#experiencia" class="nav__link">Experiência</a></li>
+				<li class="nav__item"><a href="#formacao" class="nav__link">Formação</a></li>
+				<li class="nav__item"><a href="#competencias" class="nav__link">Competências</a></li>
+				<li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
+			</ul>
+		</nav>
+
+		<button class="nav__toggle">
+			<i class="pf-menu"></i>
+			<i class="pf-close"></i>
+		</button>
+	</header>
+
 	<div id="orb-stamp-container">
 		<object id="orb-stamp" data="assets/orb_stamp.svg" type="image/svg+xml">
 			orb stamp
@@ -19,5 +39,6 @@
 		pvdk stamp
 	</object>
 
+	<script type="module" src="assets/nav/nav.js"></script>
 </body>
 </html>
