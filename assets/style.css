@@ -7,10 +7,11 @@
 	margin: 0;
 	color: inherit;
 	font-family: inherit;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
 }
 
 body {
-	overflow: hidden;
 	background-color: var(--secondary-color);
 	animation-name: intro-background-color;
 	animation-duration: 1.5s;
@@ -19,9 +20,52 @@ body {
 	font-family: var(--primary-font);
 }
 
+.header {
+	position: fixed;
+	height: 100vh;
+	width: 0;
+	z-index: 1;
+	background-color: rgba(var(--primary-color-raw), 1);
+	filter: drop-shadow(0 0 2rem #202020);
+}
+
+.main {
+	height: 100vh;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-snap-align: start;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.main::-webkit-scrollbar {
+	display: none;
+}
+
+.footer {
+	position: fixed;
+	left: 0.5rem;
+	bottom: 0.5rem;
+}
+
 @keyframes intro-background-color {
 	from {
-		background-color: #000000; /* #ffffff; */
+		background-color: #000000;
+		/* #ffffff; */
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		position: fixed;
+		height: fit-content;
+		width: 100vw;
+	}
+
+	.main {
+		scroll-margin: 5vw;
 	}
 }
 
@@ -35,31 +79,27 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	position: absolute;
+	position: fixed;
 	z-index: -1;
 	top: 0;
 	left: 0;
 	width: 100vw;
 	height: 100vh;
 	filter: drop-shadow(0 0 0.5rem var(--primary-color));
+	animation: pulse-glow 1.5s ease-in-out infinite alternate;
 }
 
 #orb-stamp {
 	width: 25%;
 	max-width: 80px;
-	animation-name: intro-orb-stamp;
-	animation-duration: 1.5s;
-	animation-timing-function: ease-out;
+	animation: intro-orb-stamp 1.5s ease-out;
 }
 
 #pvdk-stamp {
 	max-height: 40px;
-	position: absolute;
-	left: 0.5rem;
-	bottom: 0.5rem;
-	animation-name: intro-pvdk-stamp;
-	animation-duration: 1.5s;
-	animation-timing-function: ease-out;
+	animation:
+		intro-pvdk-stamp 1.5s ease-out,
+		pulse-glow 1.5s ease-in-out infinite alternate;
 	filter: drop-shadow(0 0 0.25rem var(--primary-color));
 }
 
@@ -74,6 +114,12 @@ body {
 	from {
 		opacity: 0;
 		transform: translate(0, 4rem);
+	}
+}
+
+@keyframes pulse-glow {
+	to {
+		filter: drop-shadow(0 0 0.15rem var(--primary-color));
 	}
 }
 

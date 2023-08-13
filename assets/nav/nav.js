@@ -32,6 +32,7 @@ function showHomeLink() {
 }
 
 window.addEventListener('load', highlightActiveLink);
+window.addEventListener('load', showHomeLink);
 window.addEventListener('hashchange', highlightActiveLink);
 window.addEventListener('hashchange', showHomeLink);
 menuButton.addEventListener('click', toggleNav);

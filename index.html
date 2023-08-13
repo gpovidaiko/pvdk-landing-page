@@ -4,13 +4,21 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>&gt; PVDK</title>
+
 	<link rel="stylesheet" href="assets/icons/pvdk_font.css">
 	<link rel="stylesheet" href="assets/style.css">
 	<link rel="stylesheet" href="assets/nav/nav.css">
+	<link rel="stylesheet" href="assets/section/section.css">
 </head>
 <body>
-	<header>
+	<header class="header">
+		<button class="nav__toggle">
+			<i class="pf-menu"></i>
+			<i class="pf-close"></i>
+		</button>
+
 		<nav class="nav">
 			<a href="#home" class="home__link"><i class="pf-circle"></i></a>
 
@@ -22,23 +30,53 @@
 				<li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
 			</ul>
 		</nav>
-
-		<button class="nav__toggle">
-			<i class="pf-menu"></i>
-			<i class="pf-close"></i>
-		</button>
 	</header>
 
+	<main class="main">
+		<section id="home" class="section">
+			<h2>Home</h2>
+		</section>
+		<section id="sobre-mim" class="section">
+			<div class="section__content">
+				<h2>Sobre mim</h2>
+			</div>
+		</section>
+		<section id="experiencia" class="section">
+			<div class="section__content">
+				<h2>Experiência</h2>
+			</div>
+		</section>
+		<section id="formacao" class="section">
+			<div class="section__content">
+				<h2>Formação</h2>
+			</div>
+		</section>
+		<section id="competencias" class="section">
+			<div class="section__content">
+				<h2>Competências</h2>
+			</div>
+		</section>
+		<section id="contato" class="section">
+			<div class="section__content">
+				<h2>Contato</h2>
+			</div>
+		</section>
+	</main>
+	
+	<footer class="footer">
+		<object id="pvdk-stamp" data="assets/svgs/pvdk_stamp.svg" type="image/svg+xml">
+			pvdk stamp
+		</object>
+	</footer>
+
 	<div id="orb-stamp-container">
-		<object id="orb-stamp" data="assets/orb_stamp.svg" type="image/svg+xml">
+		<object id="orb-stamp" data="assets/svgs/orb_stamp.svg" type="image/svg+xml">
 			orb stamp
 		</object>
 	</div>
 
-	<object id="pvdk-stamp" data="assets/pvdk_stamp.svg" type="image/svg+xml">
-		pvdk stamp
-	</object>
-
+	<script type="module" src="main.js"></script>
 	<script type="module" src="assets/nav/nav.js"></script>
+	<script type="module" src="assets/section/section.js"></script>
 </body>
 </html>

@@ -1,0 +1,35 @@
+@import url('../root.css');
+
+.section {
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+
+	scroll-snap-align: start;
+
+	color: var(--primary-color);
+}
+
+.section__content {
+	width: 100%;
+	max-width: 960px;
+	height: 100%;
+
+	margin: auto;
+	text-align: center;
+
+	color: var(--secondary-color);
+	background-color: rgba(var(--primary-color-raw), 0.8);
+	backdrop-filter: blur(5px);
+}
+
+@media (min-width: 768px) {
+	.section__content {
+		height: fit-content;
+		min-height: 50%;
+		max-height: 95%;
+		margin: 5% 5% auto;
+	}
+}
