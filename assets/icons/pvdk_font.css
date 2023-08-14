@@ -29,3 +29,19 @@
 .pf-orb:before {
 	content: "\e003";
 }
+
+.pf-mail:before {
+	content: "\e100";
+}
+
+.pf-whatsapp:before {
+	content: "\e101";
+}
+
+.pf-linkedin:before {
+	content: "\e102";
+}
+
+.pf-github:before {
+	content: "\e103";
+}
