@@ -2,6 +2,12 @@
 	--primary-color-raw: 224, 224, 224; /* 32, 32, 32; */ /* #55ff00; */
 	--secondary-color-raw: 32, 32, 32; /* 224, 224, 224; */ /* #180018; */ /* #b7b7b7; */
 
+	/* --primary-color-raw: 85, 255, 0; */
+	/* --secondary-color-raw: 24, 0, 24; */
+
+	/* --primary-color-raw: 24, 0, 24; */
+	/* --secondary-color-raw: 85, 255, 0; */
+
 	--primary-color: rgb(var(--primary-color-raw));
 	--secondary-color: rgb(var(--secondary-color-raw));
 
