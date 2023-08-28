@@ -27,153 +27,17 @@
 	backdrop-filter: blur(5px);
 }
 
-.section__sobre-mim {
-	display: grid;
-	grid-template-areas:
-		"title"
-		"foto-profile"
-		"bio"
-		"social-medias"
-	;
-	justify-items: center;
-}
-
 .section__title {
 	font-size: 2rem;
 	margin-bottom: 1.5rem;
 	grid-area: title;
 }
 
-.section__profile-image {
-	min-height: 64px;
-    max-height: 128px;
-    height: 100%;
-	border-radius: 50%;
-	filter: drop-shadow(0 0 2px #000000);
-	grid-area: foto-profile;
-}
-
-.section__sobre-mim__content {
-	overflow-y: auto;
-	min-height: 190px;
-	padding: 0 1rem;
-	margin-top: 1.5rem;
-	grid-area: bio;
-}
-
-.section__sobre-mim__social-medias {
-	display: flex;
-	gap: 1rem;
-	list-style: none;
-	padding: 0;
-	margin-top: 1.5rem;
-	font-size: 0.75rem;
-	grid-area: social-medias;
-}
-
-.section__sobre-mim__social-medias i {
+.section__subtitle {
 	font-size: 1.5rem;
-	vertical-align: middle;
+	margin-bottom: 1.5rem;
+	grid-area: subtitle;
 }
-
-.social-media__link {
-	text-decoration: none;
-}
-
-.social-media__link:hover {
-	text-decoration: underline;
-}
-
-.social-media__link:hover i.pf-linkedin {
-	color: #0a66c2;
-}
-
-.social-media__link--linkedin:hover {
-	text-decoration-color: #0a66c2;
-}
-
-.social-media__link:hover i.pf-github {
-	color: #6e5494;
-}
-
-.social-media__link--github:hover {
-	text-decoration-color: #6e5494;
-}
-
-.section__experiencia-profissional {
-	display: grid;
-	grid-template-areas:
-		"title"
-		"companies"
-	;
-	justify-items: center;
-}
-
-.section__experiencia-profissional__content {
-	overflow-y: auto;
-	min-height: 190px;
-	display: flex;
-	flex-direction: column;
-	gap: 1.5rem;
-	grid-area: companies;
-}
-
-.experiencia-profissional__item {
-	text-align: left;
-	display: grid;
-	grid-template-areas:
-		"companie"
-		"role"
-		"period"
-		"resume"
-	;
-	gap: .5rem;
-	padding: 1rem;
-	position: relative;
-}
-
-.experiencia-profissional__item:before {
-	--cut-size: 0.5rem;
-	--border-size: 1px;
-
-	content: "";
-	position: absolute;
-	inset: 0;
-	background-color: var(--primary-color);
-	clip-path: polygon(
-		0 0, 100% 0,
-		100% calc(100% - var(--cut-size) * 2), calc(100% - var(--cut-size) * 2) 100%,
-		0 100%, 0 0,
-		var(--border-size) var(--border-size), var(--border-size) calc(100% - var(--border-size)),
-		calc(100% - var(--cut-size) * 2 - var(--border-size) * 0.41421) calc(100% - var(--border-size)), calc(100% - var(--border-size)) calc(100% - var(--cut-size) * 2 - var(--border-size) * 0.41421),
-		calc(100% - var(--border-size)) var(--border-size), var(--border-size) var(--border-size)
-	);
-}
-
-.experiencia-profissional__empresa {
-	width: 100%;
-	height: 4rem;
-	background-color: var(--primary-color);
-	grid-area: companie;
-	transition: background-color 0.75s;
-}
-
-.experiencia-profissional__cargo {
-	font-weight: bold;
-	font-size: 1.1em;
-	grid-area: role;
-}
-
-.experiencia-profissional__periodo {
-	font-style: italic;
-	font-size: .9em;
-	grid-area: period;
-}
-
-.experiencia-profissional__resumo {
-	grid-area: resume;
-}
-
 
 .section__paragraph {
 	text-align: left;
@@ -181,7 +45,13 @@
 }
 
 @media (min-width: 768px) {
+
 	.section__title {
+		justify-self: left;
+		padding: 0 1rem;
+	}
+
+	.section__subtitle {
 		justify-self: left;
 		padding: 0 1rem;
 	}
@@ -191,54 +61,9 @@
 		min-height: 50%;
 		max-height: 95%;
 		margin: 5% 5% auto;
-		clip-path: polygon(
-			0 0, calc(100% - 4rem) 0, 
-			100% 4rem, 100% 100%, 
-			4rem 100%, 0 calc(100% - 4rem)
-		);
+		clip-path: polygon(0 0, calc(100% - 4rem) 0,
+				100% 4rem, 100% 100%,
+				4rem 100%, 0 calc(100% - 4rem));
 	}
 
-	.section__sobre-mim {
-		grid-template-rows: repeat(min-content, 3) 1fr;
-		grid-template-areas:
-			"foto-profile title"
-			"foto-profile bio"
-			"social-medias bio"
-			". bio"
-		;
-	}
-	
-	.section__profile-image {
-		align-self: center;
-	}
-
-	.section__sobre-mim__content {
-		margin-top: 0;
-	}
-
-	.section__sobre-mim__social-medias {
-		flex-direction: column;
-		gap: 0.25rem;
-	}
-
-	.experiencia-profissional__item {
-		grid-template-rows: auto 1fr;
-		grid-template-areas:
-			"companie role period"
-			"companie resume resume"
-		;
-		column-gap: 1.5rem;
-	}
-
-	.experiencia-profissional__empresa {
-		width: 128px;
-		height: 128px;
-		border-radius: 50%;
-		align-self: center;
-		filter: drop-shadow(0 0 2px #000000);
-	}
-
-	.experiencia-profissional__periodo {
-		text-align: right;
-	}
 }

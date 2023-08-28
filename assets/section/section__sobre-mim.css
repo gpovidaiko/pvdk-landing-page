@@ -1,0 +1,94 @@
+@import url('../root.css');
+
+.section__sobre-mim {
+	display: grid;
+	grid-template-areas:
+		"title"
+		"foto-profile"
+		"bio"
+		"social-medias"
+	;
+	justify-items: center;
+}
+
+.section__profile-image {
+	min-height: 64px;
+	max-height: 128px;
+	height: 100%;
+	border-radius: 50%;
+	filter: drop-shadow(0 0 2px #000000);
+	grid-area: foto-profile;
+}
+
+.section__sobre-mim__content {
+	overflow-y: auto;
+	min-height: 190px;
+	padding: 0 1rem;
+	margin-top: 1.5rem;
+	grid-area: bio;
+}
+
+.section__sobre-mim__social-medias {
+	display: flex;
+	gap: 1rem;
+	list-style: none;
+	padding: 0;
+	margin-top: 1.5rem;
+	font-size: 0.75rem;
+	grid-area: social-medias;
+}
+
+.section__sobre-mim__social-medias i {
+	font-size: 1.5rem;
+	vertical-align: middle;
+}
+
+.social-media__link {
+	text-decoration: none;
+}
+
+.social-media__link:hover {
+	text-decoration: underline;
+}
+
+.social-media__link:hover i.pf-linkedin {
+	color: #0a66c2;
+}
+
+.social-media__link--linkedin:hover {
+	text-decoration-color: #0a66c2;
+}
+
+.social-media__link:hover i.pf-github {
+	color: #6e5494;
+}
+
+.social-media__link--github:hover {
+	text-decoration-color: #6e5494;
+}
+
+@media (min-width: 768px) {
+	.section__sobre-mim {
+		grid-template-rows: repeat(min-content, 3) 1fr;
+		grid-template-areas:
+			"foto-profile title"
+			"foto-profile bio"
+			"social-medias bio"
+			". bio"
+		;
+	}
+
+	.section__profile-image {
+		align-self: center;
+	}
+
+	.section__sobre-mim__content {
+		margin-top: 0;
+	}
+
+	.section__sobre-mim__social-medias {
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+}

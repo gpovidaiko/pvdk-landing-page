@@ -11,6 +11,9 @@
 	<link rel="stylesheet" href="assets/style.css">
 	<link rel="stylesheet" href="assets/nav/nav.css">
 	<link rel="stylesheet" href="assets/section/section.css">
+	<link rel="stylesheet" href="assets/section/section__sobre-mim.css">
+	<link rel="stylesheet" href="assets/section/section__experiencia-profissional.css">
+	<link rel="stylesheet" href="assets/section/section__formacao.css">
 </head>
 <body>
 	<header class="header">
@@ -143,18 +146,53 @@
 			</div>
 		</section>
 		<section id="formacao" class="section">
-			<div class="section__content">
-				<h2>Formação</h2>
+			<div class="section__content section__formacao">
+				<h2 class="section__title">Formação</h2>
+
+				<div class="formacao__content">
+					<div class="formacao__item">
+						<object class="formacao__instiuicao" data="assets/svgs/pucpr.svg" type="image/svg+xml">
+							pucpr logo
+						</object>
+	
+						<p class="formacao__curso">Sistemas de Informação</p>
+						
+						<p class="formacao__nivel">Bacharelado</p>
+	
+						<p class="formacao__period">2013 à 2018</p>
+					</div>
+	
+					<div class="formacao__item formacao__item--minor">
+						<object class="formacao__instiuicao" data="assets/svgs/pucpr.svg" type="image/svg+xml">
+							pucpr logo
+						</object>
+
+						<p class="formacao__curso">Inteligência Artificial Aplicada</p>
+						
+						<p class="formacao__nivel">Pós-graduação</p>
+	
+						<p class="formacao__period">2019 à 2021</p>
+					</div>
+				</div>
+
+				<h3 class="section__subtitle">Complementar</h3>
+
+				<div class="formacao__complementar__filter">
+					<input id="filter-input" type="search" />
+					<button id="filter-button" type="button"><i class="pf-filter"></i></button>
+				</div>
+
+				<div class="formacao__complementar__content"></div>
 			</div>
 		</section>
 		<section id="competencias" class="section">
 			<div class="section__content">
-				<h2>Competências</h2>
+				<h2 class="section__title">Competências</h2>
 			</div>
 		</section>
 		<section id="contato" class="section">
 			<div class="section__content">
-				<h2>Contato</h2>
+				<h2 class="section__title">Contato</h2>
 			</div>
 		</section>
 	</main>
@@ -174,5 +212,6 @@
 	<script type="module" src="main.js"></script>
 	<script type="module" src="assets/nav/nav.js"></script>
 	<script type="module" src="assets/section/section.js"></script>
+	<script type="module" src="assets/js/formacao-complementar.js"></script>
 	</body>
 </html>

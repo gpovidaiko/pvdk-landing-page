@@ -1,0 +1,238 @@
+@import url('../root.css');
+
+.section__formacao {
+	display: grid;
+	grid-template-areas:
+		"title"
+		"primary-education"
+		"subtitle"
+		"filter"
+		"complementary-education"
+	;
+	justify-items: center;
+}
+
+.formacao__content {
+	display: flex;
+	flex-direction: row;
+	gap: 1.5rem;
+	width: 100%;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	align-items: stretch;
+	margin-bottom: 1.5rem;
+	grid-area: primary-education;
+}
+
+.formacao__item {
+	--width: 50%;
+	--cut-size: calc(var(--width) / 4);
+
+	display: grid;
+	grid-template-areas:
+		"institution"
+		"course"
+		"level"
+		"period"
+	;
+	gap: .5rem;
+	padding: 1rem;
+	justify-items: center;
+	position: relative;
+	width: var(--width);
+	max-width: 175px;
+	max-height: 350px;
+	aspect-ratio: 1 / 2;
+	padding-bottom: var(--cut-size);
+}
+
+.formacao__item--minor {
+	transform: scale(.9);
+}
+
+.formacao__item:before {
+	--border-size: 1px;
+
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: var(--primary-color);
+	clip-path: polygon(0 0, 100% 0,
+			100% calc(100% - var(--cut-size) * 2), 50% 100%,
+			50% 100%, 0 calc(100% - var(--cut-size) * 2), 0 0,
+			var(--border-size) var(--border-size), var(--border-size) calc(100% - var(--cut-size) * 2 - var(--border-size) * 0.41421),
+			calc(50% + var(--border-size) * 0.41421) calc(100% - var(--border-size)), calc(50% - var(--border-size) * 0.41421) calc(100% - var(--border-size)),
+			calc(100% - var(--border-size)) calc(100% - var(--cut-size) * 2 - var(--border-size) * 0.41421), calc(100% - var(--border-size)) var(--border-size),
+			var(--border-size) var(--border-size));
+}
+
+.formacao__instiuicao {
+	background: var(--primary-color);
+	aspect-ratio: 1;
+	border-radius: 50%;
+	height: 100%;
+	width: 100%;
+	max-height: 128px;
+	max-width: 128px;
+	filter: drop-shadow(0 0 2px #000000);
+	grid-area: institution;
+}
+
+.formacao__curso {
+	font-weight: bold;
+	font-size: 1.1em;
+	grid-area: course;
+}
+
+.formacao__nivel {
+	background: var(--secondary-color);
+	color: var(--primary-color);
+	font-size: .9em;
+	border-radius: 0.25rem;
+	padding: 0 .5rem;
+	height: fit-content;
+	grid-area: level;
+}
+
+.formacao__period {
+	font-style: italic;
+	font-size: .9em;
+	grid-area: period;
+}
+
+.formacao__complementar__filter {
+	margin-bottom: 1rem;
+	height: 2rem;
+	padding: 0 1rem;
+	width: 100%;
+    justify-self: center;
+	display: flex;
+	max-width: 320px;
+	grid-area: filter;
+}
+
+input {
+	background: none;
+	border: none;
+	border-bottom: solid 1px var(--secondary-color);
+}
+
+input#filter-input {
+	width: 100%;
+	padding: 0 .75rem;
+}
+
+button {
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	padding: 0 .75rem;
+	border: none;
+}
+
+button#filter-button {
+	border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.formacao__complementar__content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 1rem;
+	width: 100%;
+	grid-area: complementary-education;
+}
+
+.formacao__complementar__item {
+	display: grid;
+	grid-template-areas:
+		'institution name name'
+		'institution level .'
+		'institution certificate period'
+	;
+	grid-template-columns: auto 1fr auto;
+	grid-template-rows: auto 1fr auto;
+	font-size: 0.9em;
+	gap: .25rem 1rem;
+	width: 100%;
+	max-width: 400px;
+	position: relative;
+	padding: 0.5rem;
+}
+
+.formacao__complementar__item:before {
+	--cut-size: 0.5rem;
+	--border-size: 1px;
+
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: var(--primary-color);
+	clip-path: polygon(0 0, 100% 0,
+			100% 100%, calc(var(--cut-size) * 2) 100%,
+			0 calc(100% - var(--cut-size) * 2), 0 0,
+			var(--border-size) var(--border-size), var(--border-size) calc(100% - var(--cut-size) * 2 - var(--border-size) * 0.41421),
+			calc(var(--cut-size) * 2 + var(--border-size) * 0.41421) calc(100% - var(--border-size)), calc(100% - var(--border-size)) calc(100% - var(--border-size)),
+			calc(100% - var(--border-size)) var(--border-size), var(--border-size) var(--border-size));
+}
+
+.formacao__complementar__instituicao {
+	background: var(--secondary-color);
+	color: var(--primary-color);
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	align-self: center;
+	filter: drop-shadow(0 0 2px #000000);
+	grid-area: institution;
+}
+
+.formacao__complementar__nome {
+	text-align: left;
+	grid-area: name;
+}
+
+.formacao__complementar__periodo {
+	text-align: right;
+	font-style: italic;
+	font-size: .9em;
+	grid-area: period;
+}
+
+.formacao__complementar__level {
+	background: var(--secondary-color);
+	color: var(--primary-color);
+	font-size: .9em;
+	border-radius: 0.25rem;
+	padding: 0 .5rem;
+	width: fit-content;
+	height: fit-content;
+	grid-area: level;
+}
+
+.formacao__complementar__certificado {
+	font-size: .9em;
+	width: fit-content;
+	text-decoration: none;
+	grid-area: certificate;
+}
+
+.formacao__complementar__certificado i {
+	margin-left: 0.25rem;
+}
+
+.formacao__complementar__certificado:hover {
+	text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+
+	.formacao__complementar__filter {
+		justify-self: end;
+	}
+
+	.formacao__complementar__item {
+		width: 50%;
+		max-width: 320px;
+	}
+
+}
