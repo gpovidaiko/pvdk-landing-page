@@ -1,0 +1,52 @@
+@import url('../root.css');
+
+.section__competencias {
+	display: grid;
+	grid-template-areas:
+		"title"
+		"container"
+	;
+	justify-items: center;
+	grid-template-rows: auto 1fr;
+}
+
+.competencias__container {
+	display: flex;
+	flex-direction: column;
+	grid-area: container;
+}
+
+.competencias__sub-section {
+    flex: 1 1 100%;
+}
+
+.section__subtitle {
+	text-align: start;
+}
+
+.competencias__list {
+	margin-bottom: 1.5rem;
+	text-align: start;
+	list-style: none;
+	padding-inline-start: 1rem;
+}
+
+.competencias__list li {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: .5rem;
+}
+
+@media (min-width: 768px) {
+
+	.competencias__container {
+		flex-direction: row;
+		width: inherit;
+		justify-content: space-around;
+	}
+
+	.section__competencias {
+		justify-items: start;
+	}
+
+}
