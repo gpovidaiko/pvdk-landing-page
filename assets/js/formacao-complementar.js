@@ -76,7 +76,7 @@ function renderRedirectIcon() {
 }
 
 function csvToJson(csvData) {
-	const lines = csvData.split('\r\n');
+	const lines = csvData.split('\n');
 	const headers = lines.shift().split(';');
 	const jsonData = [];
 
