@@ -44,6 +44,22 @@
 	margin-bottom: 1rem;
 }
 
+.social-media__link:hover i.pf-linkedin {
+	color: #0a66c2;
+}
+
+.social-media__link--linkedin:hover {
+	text-decoration-color: #0a66c2;
+}
+
+.social-media__link:hover i.pf-github {
+	color: #6e5494;
+}
+
+.social-media__link--github:hover {
+	text-decoration-color: #6e5494;
+}
+
 @media (min-width: 768px) {
 
 	.section__title {
@@ -58,8 +74,9 @@
 
 	.section__content {
 		height: fit-content;
-		max-height: 95%;
-		margin: 5% 5% auto;
+		max-height: 80%;
+		margin: auto;
+		padding: 2rem 4rem;
 		clip-path: polygon(0 0, calc(100% - 4rem) 0,
 				100% 4rem, 100% 100%,
 				4rem 100%, 0 calc(100% - 4rem));

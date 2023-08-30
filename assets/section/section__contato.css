@@ -1,0 +1,36 @@
+@import url('../root.css');
+
+.section__contato {
+	display: grid;
+	grid-template-areas:
+		"title"
+		"contato"
+	;
+	grid-template-rows: auto 1fr;
+}
+
+.contato__container {
+	display: flex;
+	align-items: start;
+	flex-direction: column;
+	justify-content: center;
+	grid-area: contato;
+}
+
+.contato__container p {
+	font-size: 1.125rem;
+	margin-top: .75rem;
+	padding: 0 1rem;
+}
+
+.contato__container i {
+	vertical-align: middle;
+	font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+	.section__contato {
+		width: fit-content;
+		padding: 2rem 4rem 4rem;
+	}
+}

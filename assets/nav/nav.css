@@ -99,7 +99,7 @@
 	opacity: 1;
 }
 
-.nav__link {
+.nav__link:hover {
 	text-decoration: none;
 }
 

@@ -136,7 +136,7 @@ button#filter-button {
 .formacao__complementar__content {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	gap: 1rem;
 	width: 100%;
 	grid-area: complementary-education;
@@ -212,16 +212,11 @@ button#filter-button {
 .formacao__complementar__certificado {
 	font-size: .9em;
 	width: fit-content;
-	text-decoration: none;
 	grid-area: certificate;
 }
 
 .formacao__complementar__certificado i {
 	margin-left: 0.25rem;
-}
-
-.formacao__complementar__certificado:hover {
-	text-decoration: underline;
 }
 
 @media (min-width: 768px) {
