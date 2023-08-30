@@ -136,7 +136,7 @@ button#filter-button {
 .formacao__complementar__content {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-between;
 	gap: 1rem;
 	width: 100%;
 	grid-area: complementary-education;
@@ -221,6 +221,17 @@ button#filter-button {
 
 @media (min-width: 768px) {
 
+	.section__formacao {
+		grid-template-areas:
+			"title title"
+			"primary-education primary-education"
+			"subtitle subtitle"
+			". filter"
+			"complementary-education complementary-education"
+		;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
 	.formacao__complementar__filter {
 		justify-self: end;
 	}
@@ -228,6 +239,7 @@ button#filter-button {
 	.formacao__complementar__item {
 		width: 50%;
 		max-width: 320px;
+		flex: 1 1 50%;
 	}
 
 }

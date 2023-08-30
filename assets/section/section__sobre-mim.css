@@ -45,7 +45,7 @@
 
 @media (min-width: 768px) {
 	.section__sobre-mim {
-		grid-template-rows: repeat(min-content, 3) 1fr;
+		grid-template-rows: repeat(3, min-content) 1fr;
 		grid-template-areas:
 			"foto-profile title"
 			"foto-profile bio"
@@ -65,6 +65,7 @@
 	.section__sobre-mim__social-medias {
 		flex-direction: column;
 		gap: 0.25rem;
+		margin: 1rem 0px;
 	}
 
 }

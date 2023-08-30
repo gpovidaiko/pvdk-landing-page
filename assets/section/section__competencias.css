@@ -16,10 +16,6 @@
 	grid-area: container;
 }
 
-.competencias__sub-section {
-    flex: 1 1 100%;
-}
-
 .section__subtitle {
 	text-align: start;
 }
@@ -37,16 +33,15 @@
 	gap: .5rem;
 }
 
+.competencia__grau {
+	transform: skew(330deg, 0deg);
+}
+	
+
 @media (min-width: 768px) {
 
-	.competencias__container {
-		flex-direction: row;
-		width: inherit;
-		justify-content: space-around;
-	}
-
 	.section__competencias {
-		justify-items: start;
+		width: fit-content;
 	}
 
 }
