@@ -97,13 +97,13 @@ body {
 	animation: pulse-glow 1.5s ease-in-out infinite alternate;
 }
 
-#orb-stamp {
+#orb-stamp-root {
 	width: 25%;
 	max-width: 80px;
 	animation: intro-orb-stamp 1.5s ease-out;
 }
 
-#pvdk-stamp {
+#pvdk-stamp-root {
 	max-height: 40px;
 	animation:
 		intro-pvdk-stamp 1.5s ease-out,

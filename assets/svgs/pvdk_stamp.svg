@@ -3,9 +3,8 @@
 	width="40"
 	height="60"
 	viewBox="0 0 40 60"
-	fill="none"
 	version="1.1"
-	id="svg364"
+	id="pvdk_stamp"
 	sodipodi:docname="pvdk_stamp.svg"
 	inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
 	xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -26,8 +25,7 @@
 			uri="#mask-powermask-path-effect1973"
 			invert="false"
 			hide_mask="false"
-			background="true"
-			background_color="#ffffffff" />
+			background="true" />
 		<filter
 			id="mask-powermask-path-effect1402_inverse"
 			inkscape:label="filtermask-powermask-path-effect1402"
@@ -116,13 +114,10 @@
 	</defs>
 	<sodipodi:namedview
 		id="namedview366"
-		pagecolor="#ffffff"
-		bordercolor="#666666"
 		borderopacity="1.0"
 		inkscape:showpageshadow="2"
 		inkscape:pageopacity="0.0"
 		inkscape:pagecheckerboard="0"
-		inkscape:deskcolor="#d1d1d1"
 		showgrid="false"
 		inkscape:zoom="13.433333"
 		inkscape:cx="38.933002"

@@ -16,6 +16,12 @@
 	<link rel="stylesheet" href="assets/section/section__formacao.css">
 	<link rel="stylesheet" href="assets/section/section__competencias.css">
 	<link rel="stylesheet" href="assets/section/section__contato.css">
+
+	<link rel="stylesheet" href="assets/svgs/sinqia__svg.css">
+	<link rel="stylesheet" href="assets/svgs/stefanini__svg.css">
+	<link rel="stylesheet" href="assets/svgs/alivepro__svg.css">
+	<link rel="stylesheet" href="assets/svgs/pucpr__svg.css">
+	<link rel="stylesheet" href="assets/svgs/alura__svg.css">
 </head>
 <body>
 	<header class="header">
@@ -39,7 +45,6 @@
 
 	<main class="main">
 		<section id="home" class="section">
-			<h2>Home</h2>
 		</section>
 		<section id="sobre-mim" class="section">
 			<div class="section__content section__sobre-mim">
@@ -94,10 +99,10 @@
 
 				<div class="section__experiencia-profissional__content">
 					<div class="experiencia-profissional__item">
-						<object id="sinqia" class="experiencia-profissional__empresa" data="assets/svgs/sinqia.svg" type="image/svg+xml">
-							sinqia logo
-						</object>
-	
+						<svg id="sinqia" class="experiencia-profissional__empresa" viewBox="0 0 440 182">
+							<use href="assets/svgs/sinqia.svg#sinqia-logo__svg"></use>
+						</svg>
+						 	
 						<p class="experiencia-profissional__cargo">Programador SR</p>
 	
 						<p class="experiencia-profissional__periodo">fev/2019 à jun/2023</p>
@@ -112,10 +117,10 @@
 					</div>
 	
 					<div class="experiencia-profissional__item">
-						<object id="stefanini" class="experiencia-profissional__empresa" data="assets/svgs/stefanini.svg" type="image/svg+xml">
-							stefanini logo
-						</object>
-	
+						<svg id="stefanini" class="experiencia-profissional__empresa" viewBox="0 0 440 120">
+							<use href="assets/svgs/stefanini.svg#stefanini-logo__svg"></use>
+						</svg>
+							
 						<p class="experiencia-profissional__cargo">Programador JR</p>
 	
 						<p class="experiencia-profissional__periodo">ago/2017 à fev/2019</p>
@@ -129,10 +134,10 @@
 					</div>
 
 					<div class="experiencia-profissional__item">
-						<object id="alivepro" class="experiencia-profissional__empresa" data="assets/svgs/alivepro.svg" type="image/svg+xml">
-							alivepro logo
-						</object>
-						
+						<svg id="alivepro" class="experiencia-profissional__empresa" viewBox="0 0 440 136">
+							<use href="assets/svgs/alivepro.svg#alivepro-logo__svg"></use>
+						</svg>
+												
 						<p class="experiencia-profissional__cargo">Desenvolvedor Java</p>
 	
 						<p class="experiencia-profissional__periodo">jun/2013 à ago/2017</p>
@@ -153,9 +158,9 @@
 
 				<div class="formacao__content">
 					<div class="formacao__item">
-						<object class="formacao__instiuicao" data="assets/svgs/pucpr.svg" type="image/svg+xml">
-							pucpr logo
-						</object>
+						<svg class="formacao__instiuicao pucpr__logo" viewBox="0 0 128 128">
+							<use href="assets/svgs/pucpr.svg#pucpr-logo__svg"></use>
+						</svg>
 	
 						<p class="formacao__curso">Sistemas de Informação</p>
 						
@@ -165,9 +170,9 @@
 					</div>
 	
 					<div class="formacao__item formacao__item--minor">
-						<object class="formacao__instiuicao" data="assets/svgs/pucpr.svg" type="image/svg+xml">
-							pucpr logo
-						</object>
+						<svg class="formacao__instiuicao pucpr__logo" viewBox="0 0 128 128">
+							<use href="assets/svgs/pucpr.svg#pucpr-logo__svg"></use>
+						</svg>
 
 						<p class="formacao__curso">Inteligência Artificial Aplicada</p>
 						
@@ -238,15 +243,15 @@
 	</main>
 	
 	<footer class="footer">
-		<object id="pvdk-stamp" data="assets/svgs/pvdk_stamp.svg" type="image/svg+xml">
-			pvdk stamp
-		</object>
+		<svg id="pvdk-stamp-root" width="40" height="60" viewBox="0 0 40 60">
+			<use href="assets/svgs/pvdk_stamp.svg#pvdk_stamp"></use>
+		</svg>
 	</footer>
 
 	<div id="orb-stamp-container">
-		<object id="orb-stamp" data="assets/svgs/orb_stamp.svg" type="image/svg+xml">
-			orb stamp
-		</object>
+		<svg id="orb-stamp-root" width="114" height="121" viewBox="0 0 114 121">
+			<use href="assets/svgs/orb_stamp.svg#orb_stamp"></use>
+		</svg>
 	</div>
 
 	<script type="module" src="main.js"></script>

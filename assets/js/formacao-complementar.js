@@ -57,14 +57,17 @@ function renderData(data) {
 }
 
 function renderAluraLogo() {
-	const object = document.createElement('object');
+	const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+	use.setAttribute('href', 'assets/svgs/alura.svg#alura-logo__svg');
 
-	object.data = "assets/svgs/alura.svg";
-	object.type = "image/svg+xml";
+	const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+	svg.setAttribute('viewBox', ' 0 0 128 128');
+	svg.classList.add('formacao__complementar__instituicao');
+	svg.classList.add('alura__svg');
 
-	object.classList.add('formacao__complementar__instituicao');
+	svg.appendChild(use);
 
-	return object;
+	return svg;
 }
 
 function renderRedirectIcon() {
@@ -76,7 +79,7 @@ function renderRedirectIcon() {
 }
 
 function csvToJson(csvData) {
-	const lines = csvData.split('\n');
+	const lines = csvData.replaceAll('\r', '').split('\n');
 	const headers = lines.shift().split(';');
 	const jsonData = [];
 

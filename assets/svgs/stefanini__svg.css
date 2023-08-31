@@ -1,0 +1,17 @@
+@import url('../root.css');
+
+#stefanini {
+	background: var(--primary-color);
+	fill: var(--secondary-color);
+	transition:
+		background-color 0.5s,
+		fill 0.5s;
+}
+
+#stefanini:hover {
+	--logo-background-color: #262d57;
+	--logo-fill-color: #f8f8f8;
+
+	background: var(--logo-background-color);
+	fill: var(--logo-fill-color);
+}

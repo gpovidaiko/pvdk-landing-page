@@ -1,0 +1,17 @@
+@import url('../root.css');
+
+#sinqia {
+	background-color: var(--primary-color);
+	fill: var(--secondary-color);
+	transition:
+		background-color 0.5s,
+		fill 0.5s;
+}
+
+#sinqia:hover {
+	--logo-background-color: #ff5500;
+	--logo-fill-color: #f8f8f8;
+
+	background-color: var(--logo-background-color);
+	fill: var(--logo-fill-color);
+}

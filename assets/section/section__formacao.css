@@ -176,8 +176,7 @@ button#filter-button {
 }
 
 .formacao__complementar__instituicao {
-	background: var(--secondary-color);
-	color: var(--primary-color);
+	background: var(--primary-color);
 	width: 64px;
 	height: 64px;
 	border-radius: 50%;
