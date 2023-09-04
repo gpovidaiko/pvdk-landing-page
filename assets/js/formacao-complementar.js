@@ -2,6 +2,8 @@ const sectionContent = document.querySelector('.formacao__complementar__content'
 const filterInput = document.querySelector('#filter-input');
 const filterButton = document.querySelector('#filter-button');
 
+let data;
+
 function getFilterInputValue() {
 	return filterInput.value.trim();
 }
@@ -10,13 +12,13 @@ function readData() {
 		fetch('assets/js/formacao-complementar.csv')
 			.then(response => response.text())
 			.then(response => csvToJson(response))
-			.then(response => renderData(response));
+			.then(_ => renderData());
 }
 
-function renderData(data) {
+function renderData() {
 	sectionContent.innerHTML = null
 
-	for (const item of data) {
+	for (const item of getFilteredData()) {
 		const div = document.createElement('div');
 		div.classList.add('formacao__complementar__item');
 
@@ -48,12 +50,19 @@ function renderData(data) {
 			aCertificate.innerText = '★certificado'
 			aCertificate.target = '_blank';
 			aCertificate.classList.add('formacao__complementar__certificado');
+			aCertificate.classList.add('external-link')
 			aCertificate.appendChild(renderRedirectIcon());
 			div.appendChild(aCertificate);
 		}
 
 		sectionContent.appendChild(div);
 	}
+}
+
+function getFilteredData() {
+	const filter = getFilterInputValue();
+
+	return data.filter(item => !filter || item.name.toLowerCase().includes(filter.toLowerCase()));
 }
 
 function renderAluraLogo() {
@@ -91,16 +100,15 @@ function csvToJson(csvData) {
 			jsonEntry[headers[header]] = attributes[header];
 		}
 
-		const filter = getFilterInputValue();
-
-		if (!filter || jsonEntry.name.toLowerCase().includes(filter.toLowerCase())) {
-			jsonData.push(jsonEntry);
-		}
+		jsonData.push(jsonEntry);
 	}
 
-	return jsonData;
+	data = jsonData;
+
+	return data;
 }
 
-window.addEventListener('load', readData);
-filterInput.addEventListener('keydown', event => ["Enter", "Escape"].includes(event.key) && readData());
-filterButton.addEventListener('click', readData);
+filterInput.addEventListener('keyup', event => ["Enter", "Escape"].includes(event.key) && renderData());
+filterButton.addEventListener('click', renderData);
+
+readData();

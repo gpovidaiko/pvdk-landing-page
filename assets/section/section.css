@@ -49,7 +49,7 @@
 }
 
 .social-media__link--linkedin:hover {
-	text-decoration-color: #0a66c2;
+	--border-color: #0a66c2;
 }
 
 .social-media__link:hover i.pf-github {
@@ -57,7 +57,7 @@
 }
 
 .social-media__link--github:hover {
-	text-decoration-color: #6e5494;
+	--border-color: #6e5494;
 }
 
 @media (min-width: 768px) {

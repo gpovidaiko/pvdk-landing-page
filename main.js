@@ -1,7 +1,3 @@
-function handleLoad() {
-	handleHashChange();
-}
-
 function handleHashChange() {
 	const url = new URL(window.location.href);
 	const sectionId = url.hash;
@@ -18,5 +14,14 @@ function handleHashChange() {
 	});
 }
 
-window.addEventListener("load", handleLoad);
+function goToSectionActive() {
+	const url = new URL(window.location.href);
+	const sectionId = url.hash;
+	const section = document.getElementById(sectionId.substring(1));
+	section.scrollIntoView();
+}
+
 window.addEventListener("hashchange", handleHashChange);
+
+handleHashChange();
+goToSectionActive();

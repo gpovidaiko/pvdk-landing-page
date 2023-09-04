@@ -15,10 +15,21 @@ a {
 	text-decoration: none;
 }
 
-a:hover {
-	text-decoration: underline;
-}
+.external-link {
+	--border-color: var(--secondary-color);
+	--border-width: 0.125rem;
 
+	padding: 0.125rem 0.75rem 0.125rem calc(0.75rem - var(--border-width));
+	border-left: var(--border-width) solid var(--border-color);
+	transition:
+		padding .25s ease-in-out,
+		border-left .25s ease-in-out;
+}
+	
+.external-link:hover {
+	--border-width: 0.5rem;
+}
+	
 body {
 	background-color: var(--secondary-color);
 	animation-name: intro-background-color;

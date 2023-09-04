@@ -71,9 +71,7 @@
 	aspect-ratio: 1;
 	border-radius: 50%;
 	height: 100%;
-	width: 100%;
 	max-height: 128px;
-	max-width: 128px;
 	filter: drop-shadow(0 0 2px #000000);
 	grid-area: institution;
 }
@@ -107,7 +105,6 @@
 	width: 100%;
     justify-self: center;
 	display: flex;
-	max-width: 320px;
 	grid-area: filter;
 }
 
@@ -154,7 +151,6 @@ button#filter-button {
 	font-size: 0.9em;
 	gap: .25rem 1rem;
 	width: 100%;
-	max-width: 400px;
 	position: relative;
 	padding: 0.5rem;
 }
@@ -177,9 +173,9 @@ button#filter-button {
 
 .formacao__complementar__instituicao {
 	background: var(--primary-color);
-	width: 64px;
 	height: 64px;
 	border-radius: 50%;
+	aspect-ratio: 1;
 	align-self: center;
 	filter: drop-shadow(0 0 2px #000000);
 	grid-area: institution;
@@ -236,9 +232,7 @@ button#filter-button {
 	}
 
 	.formacao__complementar__item {
-		width: 50%;
-		max-width: 320px;
-		flex: 1 1 50%;
+		width: calc((100% - 1rem) / 2);
 	}
 
 }

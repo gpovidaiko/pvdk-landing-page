@@ -16,6 +16,7 @@
 	max-height: 128px;
 	height: 100%;
 	border-radius: 50%;
+	aspect-ratio: 1;
 	filter: drop-shadow(0 0 2px #000000);
 	grid-area: foto-profile;
 }
