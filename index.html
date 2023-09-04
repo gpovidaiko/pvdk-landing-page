@@ -25,10 +25,12 @@
 </head>
 <body>
 	<header class="header">
-		<button class="nav__toggle">
+		<button class="nav__toggle" alt="menu de navegação">
 			<i class="pf-menu"></i>
 			<i class="pf-close"></i>
 		</button>
+
+		<h1>gledson povidaiko</h1>
 
 		<nav class="nav">
 			<a href="#home" class="home__link"><i class="pf-circle"></i></a>
@@ -51,7 +53,7 @@
 				<h2 class="section__title">Sobre mim</h2>
 
 				<img class="section__profile-image" src="assets/images/profile-me-001.jpg"
-					alt="foto de perfil de gledson povidaiko em preto e branco, visto de frente, com camisa escura. Homem de barba e cabelo comprido amarrado para trás."
+					alt="Foto de perfil de gledson povidaiko. Homem, branco, de barba e cabelo comprido amarrado para trás."
 				/>
 
 				<div class="section__sobre-mim__content">
@@ -99,10 +101,12 @@
 
 				<div class="section__experiencia-profissional__content">
 					<div class="experiencia-profissional__item">
-						<svg id="sinqia" class="experiencia-profissional__empresa" viewBox="0 0 440 182">
-							<use href="assets/svgs/sinqia.svg#sinqia-logo__svg"></use>
-						</svg>
-						 	
+						<h3 class="experiencia-profissional__empresa">
+							<svg id="sinqia" class="experiencia-profissional__empresa__logo" viewBox="0 0 440 182" alt="Sinqia">
+								<use href="assets/svgs/sinqia.svg#sinqia-logo__svg"></use>
+							</svg>
+						</h3>
+
 						<p class="experiencia-profissional__cargo">Programador SR</p>
 	
 						<p class="experiencia-profissional__periodo">fev/2019 à jun/2023</p>
@@ -117,10 +121,12 @@
 					</div>
 	
 					<div class="experiencia-profissional__item">
-						<svg id="stefanini" class="experiencia-profissional__empresa" viewBox="0 0 440 120">
-							<use href="assets/svgs/stefanini.svg#stefanini-logo__svg"></use>
-						</svg>
-							
+						<h3 class="experiencia-profissional__empresa">
+							<svg id="stefanini" class="experiencia-profissional__empresa__logo" viewBox="0 0 440 120" alt="Stefanini">
+								<use href="assets/svgs/stefanini.svg#stefanini-logo__svg"></use>
+							</svg>
+						</h3>
+
 						<p class="experiencia-profissional__cargo">Programador JR</p>
 	
 						<p class="experiencia-profissional__periodo">ago/2017 à fev/2019</p>
@@ -134,10 +140,12 @@
 					</div>
 
 					<div class="experiencia-profissional__item">
-						<svg id="alivepro" class="experiencia-profissional__empresa" viewBox="0 0 440 136">
-							<use href="assets/svgs/alivepro.svg#alivepro-logo__svg"></use>
-						</svg>
-												
+						<h3 class="experiencia-profissional__empresa">
+							<svg id="alivepro" class="experiencia-profissional__empresa__logo" viewBox="0 0 440 136" alt="Alivepro">
+								<use href="assets/svgs/alivepro.svg#alivepro-logo__svg"></use>
+							</svg>
+						</h3>
+
 						<p class="experiencia-profissional__cargo">Desenvolvedor Java</p>
 	
 						<p class="experiencia-profissional__periodo">jun/2013 à ago/2017</p>
@@ -158,11 +166,11 @@
 
 				<div class="formacao__content">
 					<div class="formacao__item">
-						<svg class="formacao__instiuicao pucpr__logo" viewBox="0 0 128 128">
+						<svg class="formacao__instiuicao pucpr__logo" viewBox="0 0 128 128" alt="PUCPR">
 							<use href="assets/svgs/pucpr.svg#pucpr-logo__svg"></use>
 						</svg>
 	
-						<p class="formacao__curso">Sistemas de Informação</p>
+						<h4 class="formacao__curso">Sistemas de Informação</h4>
 						
 						<p class="formacao__nivel">Bacharelado</p>
 	
@@ -170,11 +178,11 @@
 					</div>
 	
 					<div class="formacao__item formacao__item--minor">
-						<svg class="formacao__instiuicao pucpr__logo" viewBox="0 0 128 128">
+						<svg class="formacao__instiuicao pucpr__logo" viewBox="0 0 128 128" alt="PUCPR">
 							<use href="assets/svgs/pucpr.svg#pucpr-logo__svg"></use>
 						</svg>
 
-						<p class="formacao__curso">Inteligência Artificial Aplicada</p>
+						<h4 class="formacao__curso">Inteligência Artificial Aplicada</h4>
 						
 						<p class="formacao__nivel">Pós-graduação</p>
 	
@@ -185,8 +193,9 @@
 				<h3 class="section__subtitle">Complementar</h3>
 
 				<div class="formacao__complementar__filter">
+					<label id="filter-label" for="filter-input">Filtro</label>
 					<input id="filter-input" type="search" />
-					<button id="filter-button" type="button"><i class="pf-filter"></i></button>
+					<button id="filter-button" type="button" alt="filtrar"><i class="pf-filter"></i></button>
 				</div>
 
 				<div class="formacao__complementar__content"></div>

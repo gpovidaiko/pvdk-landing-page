@@ -27,10 +27,10 @@ function renderData() {
 			div.appendChild(image);
 		}
 
-		const pName = document.createElement('p');
-		pName.innerText = item.name;
-		pName.classList.add('formacao__complementar__nome');
-		div.appendChild(pName);
+		const hName = document.createElement('h4');
+		hName.innerText = item.name;
+		hName.classList.add('formacao__complementar__nome');
+		div.appendChild(hName);
 		
 		const pPeriod = document.createElement('p');
 		pPeriod.innerText = item.period;
@@ -70,7 +70,8 @@ function renderAluraLogo() {
 	use.setAttribute('href', 'assets/svgs/alura.svg#alura-logo__svg');
 
 	const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-	svg.setAttribute('viewBox', ' 0 0 128 128');
+	svg.setAttribute('viewBox', '0 0 128 128');
+	svg.setAttribute('alt', 'Alura');
 	svg.classList.add('formacao__complementar__instituicao');
 	svg.classList.add('alura__svg');
 

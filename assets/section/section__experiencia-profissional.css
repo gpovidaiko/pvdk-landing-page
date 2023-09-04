@@ -49,10 +49,13 @@
 }
 
 .experiencia-profissional__empresa {
+	grid-area: companie;
+}
+
+.experiencia-profissional__empresa__logo {
 	width: 100%;
 	height: 4rem;
 	background-color: var(--primary-color);
-	grid-area: companie;
 	transition: background-color 0.75s;
 }
 
@@ -84,10 +87,13 @@
 	}
 
 	.experiencia-profissional__empresa {
+		align-self: center;
+	}
+	
+	.experiencia-profissional__empresa__logo {
 		height: 128px;
 		border-radius: 50%;
 		aspect-ratio: 1;
-		align-self: center;
 		filter: drop-shadow(0 0 2px #000000);
 	}
 

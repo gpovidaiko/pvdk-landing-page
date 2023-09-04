@@ -108,6 +108,10 @@
 	grid-area: filter;
 }
 
+label#filter-label {
+	display: none;
+}
+
 input {
 	background: none;
 	border: none;
@@ -184,6 +188,7 @@ button#filter-button {
 .formacao__complementar__nome {
 	text-align: left;
 	grid-area: name;
+	font-weight: normal;
 }
 
 .formacao__complementar__periodo {
