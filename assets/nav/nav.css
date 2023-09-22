@@ -11,7 +11,7 @@
 	text-align: center;
 	font-size: 2rem;
 	color: var(--primary-color);
-	transition: scale .25s;
+	transition: scale 0.25s;
 }
 
 .nav__toggle:active {
@@ -52,9 +52,11 @@
 
 	opacity: 0;
 	translate: -100vw;
-	transition: opacity .5s, translate .5s;
+	transition:
+		opacity 0.5s,
+		translate 0.5s;
 }
-	
+
 .nav--open {
 	opacity: 1;
 	translate: 0;
@@ -66,8 +68,8 @@
 	height: 0;
 	font-size: 2rem;
 	cursor: default;
-	opacity: .1;
-	transition: opacity .5s;
+	opacity: 0.1;
+	transition: opacity 0.5s;
 }
 
 .home__link--active {
@@ -90,7 +92,8 @@
 	opacity: 0;
 }
 
-.nav__link:hover::before, .nav__link:focus::before {
+.nav__link:hover::before,
+.nav__link:focus::before {
 	opacity: 1;
 }
 

@@ -3,7 +3,7 @@
 	font-family: 'pvdk_font';
 }
 
-*[class^="pf-"] {
+*[class^='pf-'] {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
@@ -13,43 +13,43 @@
 	line-height: 1;
 	font-family: pvdk_font, monospace;
 }
-  
+
 .pf-menu:before {
-	content: "\e000";
+	content: '\e000';
 }
 
 .pf-close:before {
-	content: "\e001";
+	content: '\e001';
 }
 
 .pf-circle:before {
-	content: "\e002";
+	content: '\e002';
 }
 
 .pf-orb:before {
-	content: "\e003";
+	content: '\e003';
 }
 
 .pf-filter:before {
-	content: "\e004";
+	content: '\e004';
 }
 
 .pf-redirect:before {
-	content: "\e005";
+	content: '\e005';
 }
 
 .pf-mail:before {
-	content: "\e100";
+	content: '\e100';
 }
 
 .pf-whatsapp:before {
-	content: "\e101";
+	content: '\e101';
 }
 
 .pf-linkedin:before {
-	content: "\e102";
+	content: '\e102';
 }
 
 .pf-github:before {
-	content: "\e103";
+	content: '\e103';
 }

@@ -44,20 +44,22 @@
 	margin-bottom: 1rem;
 }
 
-.social-media__link:hover i, .social-media__link:focus i {
+.social-media__link:hover i,
+.social-media__link:focus i {
 	color: var(--border-color);
 }
 
-.social-media__link--github:hover, .social-media__link--github:focus {
+.social-media__link--github:hover,
+.social-media__link--github:focus {
 	--border-color: #6e5494;
-}	
+}
 
-.social-media__link--linkedin:hover, .social-media__link--linkedin:focus {
+.social-media__link--linkedin:hover,
+.social-media__link--linkedin:focus {
 	--border-color: #0a66c2;
 }
 
 @media (min-width: 768px) {
-
 	.section__title {
 		justify-self: left;
 		padding: 0 1rem;
@@ -74,9 +76,6 @@
 		max-width: 960px;
 		margin: auto 2rem;
 		padding: 2rem 4rem;
-		clip-path: polygon(0 0, calc(100% - 4rem) 0,
-				100% 4rem, 100% 100%,
-				4rem 100%, 0 calc(100% - 4rem));
+		clip-path: polygon(0 0, calc(100% - 4rem) 0, 100% 4rem, 100% 100%, 4rem 100%, 0 calc(100% - 4rem));
 	}
-
 }

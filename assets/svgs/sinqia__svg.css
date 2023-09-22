@@ -8,7 +8,8 @@
 		fill 0.5s;
 }
 
-#sinqia:hover, .experiencia-profissional__item:focus-within #sinqia {
+#sinqia:hover,
+.experiencia-profissional__item:focus-within #sinqia {
 	--logo-background-color: #ff5500;
 	--logo-fill-color: #f8f8f8;
 

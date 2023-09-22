@@ -69,14 +69,15 @@ body {
 	padding: 0.125rem 0.75rem 0.125rem calc(0.75rem - var(--border-width));
 	border-left: var(--border-width) solid var(--border-color);
 	transition:
-		padding .25s ease-in-out,
-		border-left .25s ease-in-out;
+		padding 0.25s ease-in-out,
+		border-left 0.25s ease-in-out;
 }
-	
-.external-link:hover, .external-link:focus {
+
+.external-link:hover,
+.external-link:focus {
 	--border-width: 0.5rem;
 }
-	
+
 .footer {
 	position: fixed;
 	left: 0.5rem;

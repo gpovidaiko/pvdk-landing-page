@@ -8,7 +8,8 @@
 		fill 0.5s;
 }
 
-.alura__svg:hover, .formacao__complementar__item:focus-within .alura__svg {
+.alura__svg:hover,
+.formacao__complementar__item:focus-within .alura__svg {
 	--logo-background-color: #051d3b;
 	--logo-fill-color: #f8f8f8;
 

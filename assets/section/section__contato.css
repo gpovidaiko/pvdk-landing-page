@@ -3,9 +3,8 @@
 .section__contato {
 	display: grid;
 	grid-template-areas:
-		"title"
-		"contato"
-	;
+		'title'
+		'contato';
 	grid-template-rows: auto 1fr;
 }
 
@@ -18,7 +17,7 @@
 
 .contato__container p {
 	font-size: 1.125rem;
-	margin-top: .75rem;
+	margin-top: 0.75rem;
 	padding: 0 1rem;
 }
 

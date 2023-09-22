@@ -8,7 +8,8 @@
 		fill 0.5s;
 }
 
-#alivepro:hover, .experiencia-profissional__item:focus-within #alivepro {
+#alivepro:hover,
+.experiencia-profissional__item:focus-within #alivepro {
 	--logo-background-color: #444488;
 	--logo-fill-color: #f8f8f8;
 

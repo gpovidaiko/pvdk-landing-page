@@ -3,9 +3,8 @@
 .section__competencias {
 	display: grid;
 	grid-template-areas:
-		"title"
-		"container"
-	;
+		'title'
+		'container';
 	justify-items: center;
 	grid-template-rows: auto 1fr;
 }
@@ -30,18 +29,15 @@
 .competencias__list li {
 	display: grid;
 	grid-template-columns: auto 1fr;
-	gap: .5rem;
+	gap: 0.5rem;
 }
 
 .competencia__grau {
 	transform: skew(330deg, 0deg);
 }
-	
 
 @media (min-width: 768px) {
-
 	.section__competencias {
 		width: fit-content;
 	}
-
 }

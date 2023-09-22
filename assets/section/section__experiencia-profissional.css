@@ -3,9 +3,8 @@
 .section__experiencia-profissional {
 	display: grid;
 	grid-template-areas:
-		"title"
-		"companies"
-	;
+		'title'
+		'companies';
 	justify-items: center;
 }
 
@@ -22,12 +21,11 @@
 	text-align: left;
 	display: grid;
 	grid-template-areas:
-		"companie"
-		"role"
-		"period"
-		"resume"
-	;
-	gap: .5rem;
+		'companie'
+		'role'
+		'period'
+		'resume';
+	gap: 0.5rem;
 	padding: 1rem;
 	position: relative;
 }
@@ -36,16 +34,24 @@
 	--cut-size: 0.5rem;
 	--border-size: 1px;
 
-	content: "";
+	content: '';
 	position: absolute;
 	inset: 0;
 	background-color: var(--primary-color);
-	clip-path: polygon(0 0, 100% 0,
-			100% calc(100% - var(--cut-size) * 2), calc(100% - var(--cut-size) * 2) 100%,
-			0 100%, 0 0,
-			var(--border-size) var(--border-size), var(--border-size) calc(100% - var(--border-size)),
-			calc(100% - var(--cut-size) * 2 - var(--border-size) * 0.41421) calc(100% - var(--border-size)), calc(100% - var(--border-size)) calc(100% - var(--cut-size) * 2 - var(--border-size) * 0.41421),
-			calc(100% - var(--border-size)) var(--border-size), var(--border-size) var(--border-size));
+	clip-path: polygon(
+		0 0,
+		100% 0,
+		100% calc(100% - var(--cut-size) * 2),
+		calc(100% - var(--cut-size) * 2) 100%,
+		0 100%,
+		0 0,
+		var(--border-size) var(--border-size),
+		var(--border-size) calc(100% - var(--border-size)),
+		calc(100% - var(--cut-size) * 2 - var(--border-size) * 0.41421) calc(100% - var(--border-size)),
+		calc(100% - var(--border-size)) calc(100% - var(--cut-size) * 2 - var(--border-size) * 0.41421),
+		calc(100% - var(--border-size)) var(--border-size),
+		var(--border-size) var(--border-size)
+	);
 }
 
 .experiencia-profissional__empresa {
@@ -67,7 +73,7 @@
 
 .experiencia-profissional__periodo {
 	font-style: italic;
-	font-size: .9em;
+	font-size: 0.9em;
 	grid-area: period;
 }
 
@@ -76,20 +82,18 @@
 }
 
 @media (min-width: 768px) {
-
 	.experiencia-profissional__item {
 		grid-template-rows: auto 1fr;
 		grid-template-areas:
-			"companie role period"
-			"companie resume resume"
-		;
+			'companie role period'
+			'companie resume resume';
 		column-gap: 1.5rem;
 	}
 
 	.experiencia-profissional__empresa {
 		align-self: center;
 	}
-	
+
 	.experiencia-profissional__empresa__logo {
 		height: 128px;
 		border-radius: 50%;
@@ -100,5 +104,4 @@
 	.experiencia-profissional__periodo {
 		text-align: right;
 	}
-
 }

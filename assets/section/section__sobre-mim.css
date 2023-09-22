@@ -3,11 +3,10 @@
 .section__sobre-mim {
 	display: grid;
 	grid-template-areas:
-		"title"
-		"foto-profile"
-		"bio"
-		"social-medias"
-	;
+		'title'
+		'foto-profile'
+		'bio'
+		'social-medias';
 	justify-items: center;
 }
 
@@ -18,7 +17,7 @@
 	border-radius: 50%;
 	aspect-ratio: 1;
 	filter: drop-shadow(0 0 2px #000000);
-	transition: transform .5s ease-in-out;
+	transition: transform 0.5s ease-in-out;
 	grid-area: foto-profile;
 }
 
@@ -29,10 +28,10 @@
 	height: 100%;
 	border-radius: 50%;
 	aspect-ratio: 1;
-	opacity: .5;
+	opacity: 0.5;
 	position: absolute;
 	left: 0;
-	transition: opacity .5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
 }
 
 .section__profile-image {
@@ -78,11 +77,10 @@
 	.section__sobre-mim {
 		grid-template-rows: repeat(3, min-content) 1fr;
 		grid-template-areas:
-			"foto-profile title"
-			"foto-profile bio"
-			"social-medias bio"
-			". bio"
-		;
+			'foto-profile title'
+			'foto-profile bio'
+			'social-medias bio'
+			'. bio';
 	}
 
 	.section__profile-image {
@@ -98,5 +96,4 @@
 		gap: 0.25rem;
 		margin: 1rem 0px;
 	}
-
 }
