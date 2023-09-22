@@ -90,7 +90,7 @@
 	opacity: 0;
 }
 
-.nav__link:hover::before {
+.nav__link:hover::before, .nav__link:focus::before {
 	opacity: 1;
 }
 

@@ -9,18 +9,21 @@ function getFilterInputValue() {
 }
 
 function readData() {
-		fetch('assets/js/formacao-complementar.csv')
-			.then(response => response.text())
-			.then(response => csvToJson(response))
-			.then(_ => renderData());
+	fetch('assets/js/formacao-complementar.csv')
+		.then(response => response.text())
+		.then(response => csvToJson(response))
+		.then(_ => renderData());
 }
 
 function renderData() {
-	sectionContent.innerHTML = null
+	const itemClassSelector = 'formacao__complementar__item';
+
+	sectionContent.querySelectorAll(itemClassSelector).forEach(item => sectionContent.removeChild(item));
 
 	for (const item of getFilteredData()) {
 		const div = document.createElement('div');
-		div.classList.add('formacao__complementar__item');
+		div.role = 'listitem';
+		div.classList.add(itemClassSelector);
 
 		if (item.institution === 'Alura') {
 			const image = renderAluraLogo();
@@ -31,7 +34,7 @@ function renderData() {
 		hName.innerText = item.name;
 		hName.classList.add('formacao__complementar__nome');
 		div.appendChild(hName);
-		
+
 		const pPeriod = document.createElement('p');
 		pPeriod.innerText = item.period;
 		pPeriod.classList.add('formacao__complementar__periodo');
@@ -47,10 +50,10 @@ function renderData() {
 		if (item.certificate) {
 			const aCertificate = document.createElement('a');
 			aCertificate.href = item.certificate;
-			aCertificate.innerText = '★certificado'
+			aCertificate.innerText = '★certificado';
 			aCertificate.target = '_blank';
 			aCertificate.classList.add('formacao__complementar__certificado');
-			aCertificate.classList.add('external-link')
+			aCertificate.classList.add('external-link');
 			aCertificate.appendChild(renderRedirectIcon());
 			div.appendChild(aCertificate);
 		}
@@ -109,7 +112,7 @@ function csvToJson(csvData) {
 	return data;
 }
 
-filterInput.addEventListener('keyup', event => ["Enter", "Escape"].includes(event.key) && renderData());
+filterInput.addEventListener('keyup', event => ['Enter', 'Escape'].includes(event.key) && renderData());
 filterButton.addEventListener('click', renderData);
 
 readData();

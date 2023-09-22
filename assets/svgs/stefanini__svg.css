@@ -8,7 +8,7 @@
 		fill 0.5s;
 }
 
-#stefanini:hover {
+#stefanini:hover, .experiencia-profissional__item:focus-within #stefanini {
 	--logo-background-color: #262d57;
 	--logo-fill-color: #f8f8f8;
 

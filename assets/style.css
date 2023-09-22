@@ -3,6 +3,16 @@
 /* ----- ----- ----- ----- ----- ----- ----- ----- */
 /*                                           geral */
 
+*:focus {
+	box-shadow: inset 0px 0px 4px 2px #0055ff;
+	box-shadow: 0px 0px 8px 4px #0055ff;
+}
+
+*:focus-visible {
+	box-shadow: inset 0px 0px 4px 2px #ff5500;
+	box-shadow: 0px 0px 8px 4px #ff5500;
+}
+
 * {
 	margin: 0;
 	color: inherit;
@@ -63,7 +73,7 @@ body {
 		border-left .25s ease-in-out;
 }
 	
-.external-link:hover {
+.external-link:hover, .external-link:focus {
 	--border-width: 0.5rem;
 }
 	

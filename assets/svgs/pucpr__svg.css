@@ -10,7 +10,7 @@
 		stroke 0.5s;
 }
 
-.pucpr__logo:hover {
+.pucpr__logo:hover, .formacao__item:focus-within .pucpr__logo {
 	--logo-background-color: #c00415;
 	--logo-fill-color: #f8f8f8;
 	background-color: var(--logo-background-color);

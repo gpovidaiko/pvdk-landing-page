@@ -11,14 +11,44 @@
 	justify-items: center;
 }
 
-.section__profile-image {
+.section__profile-image__frame {
 	min-height: 64px;
 	max-height: 128px;
 	height: 100%;
 	border-radius: 50%;
 	aspect-ratio: 1;
 	filter: drop-shadow(0 0 2px #000000);
+	transition: transform .5s ease-in-out;
 	grid-area: foto-profile;
+}
+
+.section__profile-image__frame::before {
+	background-color: var(--secondary-color);
+	mix-blend-mode: hard-light;
+	content: '';
+	height: 100%;
+	border-radius: 50%;
+	aspect-ratio: 1;
+	opacity: .5;
+	position: absolute;
+	left: 0;
+	transition: opacity .5s ease-in-out;
+}
+
+.section__profile-image {
+	height: 100%;
+	border-radius: 50%;
+	aspect-ratio: 1;
+}
+
+.section__profile-image__frame:hover,
+.section__profile-image__frame:focus-within {
+	transform: scale(1.05);
+}
+
+.section__profile-image__frame:hover::before,
+.section__profile-image__frame:focus-within::before {
+	opacity: 0;
 }
 
 .section__sobre-mim__content {

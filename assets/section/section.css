@@ -44,20 +44,16 @@
 	margin-bottom: 1rem;
 }
 
-.social-media__link:hover i.pf-linkedin {
-	color: #0a66c2;
+.social-media__link:hover i, .social-media__link:focus i {
+	color: var(--border-color);
 }
 
-.social-media__link--linkedin:hover {
-	--border-color: #0a66c2;
-}
-
-.social-media__link:hover i.pf-github {
-	color: #6e5494;
-}
-
-.social-media__link--github:hover {
+.social-media__link--github:hover, .social-media__link--github:focus {
 	--border-color: #6e5494;
+}	
+
+.social-media__link--linkedin:hover, .social-media__link--linkedin:focus {
+	--border-color: #0a66c2;
 }
 
 @media (min-width: 768px) {

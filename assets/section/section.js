@@ -14,4 +14,10 @@ function updateHash() {
 	window.location.hash = `#${sectionId}`;
 }
 
+function setFocus() {
+	const section = getHighlightedSection();
+	section.focus();
+}
+
 main.addEventListener('scrollend', updateHash);
+main.addEventListener('scrollend', setFocus);
