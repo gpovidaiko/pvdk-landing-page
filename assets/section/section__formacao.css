@@ -7,6 +7,7 @@
 		'primary-education'
 		'subtitle'
 		'filter'
+		'pagination'
 		'complementary-education';
 	justify-items: center;
 }
@@ -135,10 +136,20 @@ button {
 	color: var(--primary-color);
 	padding: 0 0.75rem;
 	border: none;
+	transition: filter 0.25s ease-in-out;
+}
+
+button:disabled {
+	filter: contrast(0.8) opacity(0.9);
 }
 
 button#filter-button {
 	border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.formacao__complementar__pagination {
+	margin-bottom: 1rem;
+	grid-area: pagination;
 }
 
 .formacao__complementar__content {
@@ -163,6 +174,35 @@ button#filter-button {
 	width: 100%;
 	position: relative;
 	padding: 0.5rem;
+}
+
+.formacao__complementar__item--empty {
+	--cut-size: 0.5rem;
+	--border-size: 1px;
+
+	--color-A: var(--primary-color);
+	--color-B: #0000;
+
+	background: linear-gradient(
+		-45deg,
+		var(--color-A) 1%,
+		var(--color-B) 1%,
+		var(--color-B) 49%,
+		var(--color-A) 49%,
+		var(--color-A) 51%,
+		var(--color-B) 51%,
+		var(--color-B) 99%,
+		var(--color-A) 99%);
+	background-size: 8px 8px;
+	background-position: 100px 100px;
+	min-height: 6rem;
+	clip-path: polygon(
+		0 0,
+		100% 0,
+		100% 100%,
+		calc(var(--cut-size) * 2) 100%,
+		0 calc(100% - var(--cut-size) * 2)
+	);
 }
 
 .formacao__complementar__item:before {
@@ -240,6 +280,7 @@ button#filter-button {
 			'primary-education primary-education'
 			'subtitle subtitle'
 			'. filter'
+			'pagination pagination'
 			'complementary-education complementary-education';
 		grid-template-columns: repeat(2, 1fr);
 	}

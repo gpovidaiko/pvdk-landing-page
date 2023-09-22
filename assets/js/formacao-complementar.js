@@ -2,7 +2,52 @@ const sectionContent = document.querySelector('.formacao__complementar__content'
 const filterInput = document.querySelector('#filter-input');
 const filterButton = document.querySelector('#filter-button');
 
+const currentPageLabel = document.querySelector('.formacao__complementar__pagination #currentPage');
+const totalPagesLabel = document.querySelector('.formacao__complementar__pagination #totalPages');
+
+const previousPageButton = document.querySelector('.formacao__complementar__pagination #previous');
+const nextPageButton = document.querySelector('.formacao__complementar__pagination #next');
+
 let data;
+
+const itemsPerPage = 5;
+let pageNumber = 0;
+let lastFilterValue;
+
+function getTotalPages() {
+	return Math.ceil(getFilteredData().length / itemsPerPage);
+}
+
+function getPageData() {
+	const data = getFilteredData();
+	const startIndex = itemsPerPage * pageNumber;
+	const endIndex = startIndex + itemsPerPage;
+
+	return data.slice(startIndex, endIndex);
+}
+
+function updatePaginationInfo() {
+	const totalPages = getTotalPages();
+	const currentPage = pageNumber;
+
+	currentPageLabel.innerText = totalPages ? currentPage + 1 : 0;
+	totalPagesLabel.innerText = totalPages;
+
+	previousPageButton.disabled = currentPage <= 0;
+	nextPageButton.disabled = currentPage >= totalPages - 1;
+}
+
+previousPageButton.addEventListener('click', _ => {
+	if (pageNumber === 0) return;
+	pageNumber -= 1;
+	renderData();
+})
+
+nextPageButton.addEventListener('click', _ => {
+	if (pageNumber + 1 === getTotalPages()) return;
+	pageNumber += 1;
+	renderData();
+})
 
 function getFilterInputValue() {
 	return filterInput.value.trim();
@@ -18,9 +63,9 @@ function readData() {
 function renderData() {
 	const itemClassSelector = 'formacao__complementar__item';
 
-	sectionContent.querySelectorAll(itemClassSelector).forEach(item => sectionContent.removeChild(item));
+	sectionContent.querySelectorAll(`.${itemClassSelector}`).forEach(item => sectionContent.removeChild(item));
 
-	for (const item of getFilteredData()) {
+	for (const item of getPageData()) {
 		const div = document.createElement('div');
 		div.role = 'listitem';
 		div.classList.add(itemClassSelector);
@@ -60,10 +105,30 @@ function renderData() {
 
 		sectionContent.appendChild(div);
 	}
+
+	fillNoContentItens();
+	updatePaginationInfo();
+}
+
+function fillNoContentItens() {
+	const itemClassSelector = 'formacao__complementar__item';
+
+	const amount = itemsPerPage - getPageData().length;
+
+	for (let item = 0; item < amount; item++) {
+		const div = document.createElement('div');
+		div.classList.add(itemClassSelector, 'formacao__complementar__item--empty');
+		sectionContent.appendChild(div);
+	}
 }
 
 function getFilteredData() {
 	const filter = getFilterInputValue();
+
+	if (lastFilterValue !== filter) {
+		lastFilterValue = filter;
+		pageNumber = 0;
+	}
 
 	return data.filter(item => !filter || item.name.toLowerCase().includes(filter.toLowerCase()));
 }
