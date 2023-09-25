@@ -1,3 +1,5 @@
+const desktopMediaQuerie = window.matchMedia('(min-width: 768px)');
+
 const sectionContent = document.querySelector('.formacao__complementar__content');
 const filterInput = document.querySelector('#filter-input');
 const filterButton = document.querySelector('#filter-button');
@@ -8,18 +10,35 @@ const totalPagesLabel = document.querySelector('.formacao__complementar__paginat
 const previousPageButton = document.querySelector('.formacao__complementar__pagination #previous');
 const nextPageButton = document.querySelector('.formacao__complementar__pagination #next');
 
-let data;
+const itemClass = 'formacao__complementar__item';
 
-const itemsPerPage = 5;
 let pageNumber = 0;
+
+let data;
 let lastFilterValue;
+let itemsPerPage;
+
+function getItemsPerPage() {
+	if (desktopMediaQuerie.matches && itemsPerPage != 10) {
+		itemsPerPage = 10;
+		pageNumber = 0;
+	}
+
+	if (!desktopMediaQuerie.matches && itemsPerPage != 5) {
+		itemsPerPage = 5
+		pageNumber = 0;
+	}
+
+	return itemsPerPage;
+}
 
 function getTotalPages() {
-	return Math.ceil(getFilteredData().length / itemsPerPage);
+	return Math.ceil(getFilteredData().length / getItemsPerPage());
 }
 
 function getPageData() {
 	const data = getFilteredData();
+	const itemsPerPage = getItemsPerPage();
 	const startIndex = itemsPerPage * pageNumber;
 	const endIndex = startIndex + itemsPerPage;
 
@@ -61,14 +80,12 @@ function readData() {
 }
 
 function renderData() {
-	const itemClassSelector = 'formacao__complementar__item';
-
-	sectionContent.querySelectorAll(`.${itemClassSelector}`).forEach(item => sectionContent.removeChild(item));
+	sectionContent.querySelectorAll(`.${itemClass}`).forEach(item => sectionContent.removeChild(item));
 
 	for (const item of getPageData()) {
 		const div = document.createElement('div');
 		div.role = 'listitem';
-		div.classList.add(itemClassSelector);
+		div.classList.add(itemClass);
 
 		if (item.institution === 'Alura') {
 			const image = renderAluraLogo();
@@ -111,13 +128,11 @@ function renderData() {
 }
 
 function fillNoContentItens() {
-	const itemClassSelector = 'formacao__complementar__item';
-
-	const amount = itemsPerPage - getPageData().length;
+	const amount = getItemsPerPage() - getPageData().length;
 
 	for (let item = 0; item < amount; item++) {
 		const div = document.createElement('div');
-		div.classList.add(itemClassSelector, 'formacao__complementar__item--empty');
+		div.classList.add(itemClass, `${itemClass}--empty`);
 		sectionContent.appendChild(div);
 	}
 }
@@ -130,7 +145,7 @@ function getFilteredData() {
 		pageNumber = 0;
 	}
 
-	return data.filter(item => !filter || item.name.toLowerCase().includes(filter.toLowerCase()));
+	return data?.filter(item => !filter || item.name.toLowerCase().includes(filter.toLowerCase()));
 }
 
 function renderAluraLogo() {
@@ -179,5 +194,6 @@ function csvToJson(csvData) {
 
 filterInput.addEventListener('keyup', event => ['Enter', 'Escape'].includes(event.key) && renderData());
 filterButton.addEventListener('click', renderData);
+desktopMediaQuerie.addEventListener('change', renderData);
 
 readData();
