@@ -19,15 +19,21 @@ let lastFilterValue;
 let itemsPerPage;
 
 function getItemsPerPage() {
-	if (desktopMediaQuerie.matches && itemsPerPage != 10) {
-		itemsPerPage = 10;
-		pageNumber = 0;
+	const desktopPageSize = 10;
+	const mobilePageSize = 5;
+	let pageResizeOffset = 1;
+
+	if (desktopMediaQuerie.matches && itemsPerPage != desktopPageSize) {
+		pageResizeOffset = itemsPerPage / desktopPageSize || 1;
+		itemsPerPage = desktopPageSize;
 	}
 
-	if (!desktopMediaQuerie.matches && itemsPerPage != 5) {
-		itemsPerPage = 5
-		pageNumber = 0;
+	if (!desktopMediaQuerie.matches && itemsPerPage != mobilePageSize) {
+		pageResizeOffset = itemsPerPage / mobilePageSize || 1;
+		itemsPerPage = mobilePageSize;
 	}
+
+	pageNumber = Math.floor(pageNumber * pageResizeOffset);
 
 	return itemsPerPage;
 }
