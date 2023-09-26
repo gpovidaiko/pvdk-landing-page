@@ -4,13 +4,15 @@
 /*                                           geral */
 
 *:focus {
-	box-shadow: inset 0px 0px 4px 2px #0055ff;
-	box-shadow: 0px 0px 8px 4px #0055ff;
+	box-shadow:
+		inset 0px 0px 4px 2px #0055ff,
+		0px 0px 8px 4px #0055ff !important;
 }
 
 *:focus-visible {
-	box-shadow: inset 0px 0px 4px 2px #ff5500;
-	box-shadow: 0px 0px 8px 4px #ff5500;
+	box-shadow:
+		inset 0px 0px 4px 2px #ff5500,
+		0px 0px 8px 4px #ff5500 !important;
 }
 
 * {
@@ -64,10 +66,9 @@ body {
 
 .external-link {
 	--border-color: var(--secondary-color);
-	--border-width: 0.125rem;
 
-	padding: 0.125rem 0.75rem 0.125rem calc(0.75rem - var(--border-width));
-	border-left: var(--border-width) solid var(--border-color);
+	padding: 0.125rem 0.75rem 0.125rem calc(0.75rem * 0.75);
+	border-left: calc(0.75rem * 0.25) solid var(--border-color);
 	transition:
 		padding 0.25s ease-in-out,
 		border-left 0.25s ease-in-out;
@@ -75,7 +76,8 @@ body {
 
 .external-link:hover,
 .external-link:focus {
-	--border-width: 0.5rem;
+	padding: 0.125rem 0.75rem 0.125rem calc(0.75rem * 0.25);
+	border-left: calc(0.75rem * 0.75) solid var(--border-color);
 }
 
 .footer {

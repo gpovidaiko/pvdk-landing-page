@@ -10,13 +10,15 @@ function getHighlightedSection() {
 
 function updateHash() {
 	const section = getHighlightedSection();
-	const sectionId = section.getAttribute('id');
-	window.location.hash = `#${sectionId}`;
+	const sectionId = section?.getAttribute('id');4
+	if (sectionId) {
+		window.location.hash = `#${sectionId}`;
+	}
 }
 
 function setFocus() {
 	const section = getHighlightedSection();
-	section.focus();
+	section?.focus();
 }
 
 main.addEventListener('scrollend', updateHash);

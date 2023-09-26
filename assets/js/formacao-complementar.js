@@ -1,5 +1,7 @@
 const desktopMediaQuerie = window.matchMedia('(min-width: 768px)');
 
+const pagination = document.querySelector('.formacao__complementar__pagination');
+
 const sectionContent = document.querySelector('.formacao__complementar__content');
 const filterInput = document.querySelector('#filter-input');
 const filterButton = document.querySelector('#filter-button');
@@ -64,15 +66,25 @@ function updatePaginationInfo() {
 
 previousPageButton.addEventListener('click', _ => {
 	if (pageNumber === 0) return;
+	const oringinalTop = pagination.getBoundingClientRect().top;
 	pageNumber -= 1;
 	renderData();
+	keepPaginationPosition(oringinalTop);
 })
 
 nextPageButton.addEventListener('click', _ => {
 	if (pageNumber + 1 === getTotalPages()) return;
+	const oringinalTop = pagination.getBoundingClientRect().top;
 	pageNumber += 1;
 	renderData();
+	keepPaginationPosition(oringinalTop);
 })
+
+function keepPaginationPosition(oringinalTop) {
+	const offsetTop = pagination.getBoundingClientRect().top - oringinalTop;
+	const parent = pagination.parentElement;
+	parent.scrollBy({ top: offsetTop, behavior: "instant" });
+}
 
 function getFilterInputValue() {
 	return filterInput.value.trim();
