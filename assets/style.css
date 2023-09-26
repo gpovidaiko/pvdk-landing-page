@@ -40,7 +40,7 @@ body {
 	width: 0;
 	z-index: 1;
 	background-color: rgba(var(--primary-color-raw), 1);
-	filter: drop-shadow(0 0 2rem #202020);
+	box-shadow: 0 0 2rem #202020;
 }
 
 .header h1 {

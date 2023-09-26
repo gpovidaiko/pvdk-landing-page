@@ -98,7 +98,13 @@
 		height: 128px;
 		border-radius: 50%;
 		aspect-ratio: 1;
-		filter: drop-shadow(0 0 2px #000000);
+		box-shadow: inset 0 0 4px #000000;
+		transition: box-shadow 0.5s;
+	}
+
+	.experiencia-profissional__empresa__logo:hover,
+	.experiencia-profissional__item:focus-within .experiencia-profissional__empresa__logo {
+		box-shadow: inset 0 0 8px #000000;
 	}
 
 	.experiencia-profissional__periodo {
