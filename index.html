@@ -250,9 +250,11 @@
 					<div class="formacao__complementar__content"></div>
 
 					<div class="formacao__complementar__pagination">
-						<button id="previous" type="button">voltar</button>
-						<span id="currentPage">?</span> de <span id="totalPages">?</span>
-						<button id="next" type="button">avançar</button>
+						<button id="previous" type="button" aria-describedby="paginationInfo">voltar</button>
+						<p id="paginationInfo">
+							<span id="currentPage">?</span> de <span id="totalPages">?</span>
+						</p>
+						<button id="next" type="button" aria-describedby="paginationInfo">avançar</button>
 					</div>
 
 				</div>

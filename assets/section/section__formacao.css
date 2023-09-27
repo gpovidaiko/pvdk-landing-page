@@ -145,7 +145,8 @@ button {
 	transition: filter 0.25s ease-in-out;
 }
 
-button:disabled {
+button:disabled,
+button[aria-disabled=true] {
 	filter: contrast(0.8) opacity(0.9);
 }
 
@@ -283,6 +284,10 @@ button#filter-button {
 
 .formacao__complementar__pagination {
 	grid-area: pagination;
+}
+
+#paginationInfo {
+	display: inline;
 }
 
 @media (min-width: 768px) {

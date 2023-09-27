@@ -6,6 +6,7 @@ const sectionContent = document.querySelector('.formacao__complementar__content'
 const filterInput = document.querySelector('#filter-input');
 const filterButton = document.querySelector('#filter-button');
 
+const paginationInfo = document.querySelector('.formacao__complementar__pagination #paginationInfo');
 const currentPageLabel = document.querySelector('.formacao__complementar__pagination #currentPage');
 const totalPagesLabel = document.querySelector('.formacao__complementar__pagination #totalPages');
 
@@ -60,8 +61,10 @@ function updatePaginationInfo() {
 	currentPageLabel.innerText = totalPages ? currentPage + 1 : 0;
 	totalPagesLabel.innerText = totalPages;
 
-	previousPageButton.disabled = currentPage <= 0;
-	nextPageButton.disabled = currentPage >= totalPages - 1;
+	previousPageButton.ariaDisabled = currentPage <= 0;
+	nextPageButton.ariaDisabled = currentPage >= totalPages - 1;
+
+	paginationInfo.ariaLabel = `página ${currentPageLabel.innerText} de ${totalPagesLabel.innerText}`;
 }
 
 previousPageButton.addEventListener('click', _ => {
@@ -99,6 +102,7 @@ function readData() {
 
 function renderData() {
 	sectionContent.querySelectorAll(`.${itemClass}`).forEach(item => sectionContent.removeChild(item));
+	sectionContent.role = 'list';
 
 	for (const item of getPageData()) {
 		const div = document.createElement('div');
