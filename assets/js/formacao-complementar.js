@@ -109,27 +109,30 @@ function renderData() {
 		div.role = 'listitem';
 		div.classList.add(itemClass);
 
+		const hName = document.createElement('h4');
+		hName.innerText = item.name;
+		hName.tabIndex = 0;
+		hName.classList.add('formacao__complementar__nome');
+		div.appendChild(hName);
+
 		if (item.institution === 'Alura') {
 			const image = renderAluraLogo();
 			div.appendChild(image);
 		}
 
-		const hName = document.createElement('h4');
-		hName.innerText = item.name;
-		hName.classList.add('formacao__complementar__nome');
-		div.appendChild(hName);
-
-		const pPeriod = document.createElement('p');
-		pPeriod.innerText = item.period;
-		pPeriod.classList.add('formacao__complementar__periodo');
-		div.appendChild(pPeriod);
-
 		if (item.level) {
 			const pLevel = document.createElement('p');
 			pLevel.innerText = item.level;
+			pLevel.tabIndex = 0;
 			pLevel.classList.add('formacao__complementar__level');
 			div.appendChild(pLevel);
 		}
+
+		const pPeriod = document.createElement('p');
+		pPeriod.innerText = item.period;
+		pPeriod.tabIndex = 0;
+		pPeriod.classList.add('formacao__complementar__periodo');
+		div.appendChild(pPeriod);
 
 		if (item.certificate) {
 			const aCertificate = document.createElement('a');
@@ -177,6 +180,8 @@ function renderAluraLogo() {
 	const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 	svg.setAttribute('viewBox', '0 0 128 128');
 	svg.setAttribute('alt', 'Alura');
+	svg.setAttribute('aria-label', 'Instituição Alura');
+	svg.setAttribute('tabindex', '0');
 	svg.classList.add('formacao__complementar__instituicao');
 	svg.classList.add('alura__svg');
 
