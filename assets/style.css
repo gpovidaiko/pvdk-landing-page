@@ -21,6 +21,26 @@
 	font-family: inherit;
 	scroll-behavior: smooth;
 	box-sizing: border-box;
+
+	--sb-track-color: #20202020;
+	--sb-thumb-color: #2020207f;
+	--sb-size: 4px;
+
+	scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+*::-webkit-scrollbar {
+	width: var(--sb-size);
+}
+
+*::-webkit-scrollbar-track {
+	background: var(--sb-track-color);
+	border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: var(--sb-thumb-color);
+	border-radius: 4px;
 }
 
 a {
@@ -103,7 +123,9 @@ body {
 	.main {
 		scroll-margin: 5vw;
 	}
+
 }
+
 
 /*                                              // */
 /* ----- ----- ----- ----- ----- ----- ----- ----- */
