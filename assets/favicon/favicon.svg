@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" version="1.1" viewBox="0 0 12.7 12.7" xml:space="preserve"
+	xmlns="http://www.w3.org/2000/svg">
+	<style>
+		:root {
+			--color-light: hsl(0, 0%, 16%);
+			--color-dark: hsl(104, 100%, 56%);
+		}
+
+		g {
+			fill: var(--color-light);
+		}
+
+		@media (prefers-color-scheme: dark) {
+			g {
+				fill: var(--color-dark);
+			}
+		}
+	</style>
+	<g>
+		<path d="m6.3496 0.81445c-3.1421 0-5.6953 2.5512-5.6953 5.6934 1e-8 3.1421 2.5532 5.6953 5.6953 5.6953s5.6953-2.5532 5.6953-5.6953-2.5532-5.6934-5.6953-5.6934zm0 0.54102c2.849 0 5.1523 2.3033 5.1523 5.1523s-2.3033 5.1543-5.1523 5.1543-5.1523-2.3053-5.1523-5.1543 2.3033-5.1523 5.1523-5.1523z"/>
+		<circle cx="6.35" cy="6.5088" r="2.1696"/>
+		<circle id="outer-sphere" cx="6.35" cy="1.0848" r="1.0848"/>
+	</g>
+</svg>
