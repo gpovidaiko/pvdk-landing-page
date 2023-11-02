@@ -1,9 +1,9 @@
 @import url('../root.css');
 
 .pucpr__logo {
-	background-color: var(--primary-color);
-	fill: var(--secondary-color);
-	stroke: var(--secondary-color);
+	background-color: var(--green-color-s2);
+	fill: var(--green-color-l1);
+	stroke: var(--green-color-l1);
 	transition:
 		background-color 0.5s,
 		fill 0.5s,

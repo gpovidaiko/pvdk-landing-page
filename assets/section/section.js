@@ -10,7 +10,7 @@ function getHighlightedSection() {
 
 function updateHash() {
 	const section = getHighlightedSection();
-	const sectionId = section?.getAttribute('id');4
+	const sectionId = section?.getAttribute('id');
 	if (sectionId) {
 		window.location.hash = `#${sectionId}`;
 	}

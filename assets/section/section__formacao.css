@@ -55,7 +55,7 @@
 	content: '';
 	position: absolute;
 	inset: 0;
-	background-color: var(--primary-color);
+	background-color: var(--green-color-l1);
 	clip-path: polygon(
 		0 0,
 		100% 0,
@@ -75,7 +75,6 @@
 }
 
 .formacao__instiuicao {
-	background: var(--primary-color);
 	aspect-ratio: 1;
 	border-radius: 50%;
 	height: 100%;
@@ -93,12 +92,13 @@
 .formacao__curso {
 	font-weight: bold;
 	font-size: 1.1em;
+	color: var(--purple-color-l1);
 	grid-area: course;
 }
 
 .formacao__nivel {
-	background: var(--secondary-color);
-	color: var(--primary-color);
+	background: var(--purple-color-s2);
+	color: var(--purple-color-l1);
 	font-size: 0.9em;
 	border-radius: 0.25rem;
 	padding: 0 0.5rem;
@@ -109,6 +109,7 @@
 .formacao__period {
 	font-style: italic;
 	font-size: 0.9em;
+	color: var(--white-color-s2);
 	grid-area: period;
 }
 
@@ -129,7 +130,7 @@ label#filter-label {
 input {
 	background: none;
 	border: none;
-	border-bottom: solid 1px var(--secondary-color);
+	border-bottom: solid 1px var(--purple-color-s2);
 }
 
 input#filter-input {
@@ -138,16 +139,16 @@ input#filter-input {
 }
 
 button {
-	background-color: var(--secondary-color);
-	color: var(--primary-color);
+	background-color: var(--purple-color-s2);
+	color: var(--purple-color-l2);
 	padding: 0 0.75rem;
 	border: none;
-	transition: filter 0.25s ease-in-out;
+	transition: background-color 0.25s ease-in-out;
 }
 
 button:disabled,
 button[aria-disabled=true] {
-	filter: contrast(0.8) opacity(0.9);
+	background-color: var(--purple-color-s1);
 }
 
 button#filter-button {
@@ -183,7 +184,7 @@ button#filter-button {
 	--cut-size: 0.5rem;
 	--border-size: 1px;
 
-	--color-A: var(--primary-color);
+	--color-A: var(--green-color-l1-a80);
 	--color-B: #0000;
 
 	background: linear-gradient(
@@ -215,7 +216,7 @@ button#filter-button {
 	content: '';
 	position: absolute;
 	inset: 0;
-	background-color: var(--primary-color);
+	background-color: var(--green-color-l1);
 	clip-path: polygon(
 		0 0,
 		100% 0,
@@ -233,7 +234,6 @@ button#filter-button {
 }
 
 .formacao__complementar__instituicao {
-	background: var(--primary-color);
 	height: 64px;
 	border-radius: 50%;
 	aspect-ratio: 1;
@@ -252,18 +252,20 @@ button#filter-button {
 	text-align: left;
 	grid-area: name;
 	font-weight: normal;
+	color: var(--purple-color-l1);
 }
 
 .formacao__complementar__periodo {
 	text-align: right;
 	font-style: italic;
 	font-size: 0.9em;
+	color: var(--white-color-s2);
 	grid-area: period;
 }
 
 .formacao__complementar__level {
-	background: var(--secondary-color);
-	color: var(--primary-color);
+	background: var(--purple-color-s2);
+	color: var(--purple-color-l1);
 	font-size: 0.9em;
 	border-radius: 0.25rem;
 	padding: 0 0.5rem;

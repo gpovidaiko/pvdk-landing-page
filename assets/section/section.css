@@ -9,7 +9,7 @@
 
 	scroll-snap-align: start;
 
-	color: var(--primary-color);
+	color: var(--white-color);
 }
 
 .section__content {
@@ -22,20 +22,21 @@
 	overflow: auto;
 	text-align: center;
 
-	color: var(--secondary-color);
-	background-color: rgba(var(--primary-color-raw), 0.8);
-	backdrop-filter: blur(5px);
+	background-color: var(--black-color-a80);
+	backdrop-filter: blur(5px) grayscale(1);
 }
 
 .section__title {
 	font-size: 2rem;
 	margin-bottom: 3rem;
+	color: var(--purple-color-l1);
 	grid-area: title;
 }
 
 .section__subtitle {
 	font-size: 1.5rem;
 	margin-bottom: 1.5rem;
+	color: var(--purple-color);
 	grid-area: subtitle;
 }
 

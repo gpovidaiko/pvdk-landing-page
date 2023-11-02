@@ -1,15 +1,32 @@
 :root {
-	/* --primary-color-raw: 224, 255, 224; */ /* 32, 32, 32; */ /* #55ff00; */
-	/* --secondary-color-raw: 32, 32, 32; */ /* 224, 224, 224; */ /* #180018; */ /* #b7b7b7; */
+	/* #80407C */
+	--purple-color-l2: hwb(304 50% 12.5%);
+	--purple-color-l1: hwb(304 37.5% 31.25%);
+	--purple-color: hwb(304 25% 50%);
+	--purple-color-s1: hwb(304 12.5% 68.75%);
+	--purple-color-s2: hwb(304 0% 87.5%);
 
-	--primary-color-raw: 149, 255, 32;
-	--secondary-color-raw: 24, 0, 24;
+	/* #5AFF1F */
+	--green-color-l1: hwb(104 25% 0%);
+	--green-color-l1-a80: hwb(104 25% 0% / 0.8);
+	--green-color: hwb(104 12.5% 0%);
+	--green-color-a80: hwb(104 12.5% 0% / 0.8);
+	--green-color-s1: hwb(104 8.75% 43.75%);
+	--green-color-s1-a80: hwb(104 8.75% 43.75% / 0.8);
+	--green-color-s2: hwb(104 5% 87.5%);
+	--green-color-s2-a80: hwb(104 5% 87.5% / 0.8);
 
-	/* --primary-color-raw: 24, 0, 24; */
-	/* --secondary-color-raw: 85, 255, 0; */
+	--black-color-l2: hwb(0 35% 85%);
+	--black-color-l1: hwb(0 25% 85%);
+	--black-color: hwb(0 15% 85%);
+	--black-color-a80: hwb(0 15% 85% / 0.8);
 
-	--primary-color: rgb(var(--primary-color-raw));
-	--secondary-color: rgb(var(--secondary-color-raw));
+	--white-color: hsl(0, 0%, 85%);
+	--white-color-s1: hsl(0, 0%, 75%);
+	--white-color-s2: hsl(0, 0%, 65%);
+
+	--primary-color: var(--green-color-l1);
+	--secondary-color: var(--green-color-s1);
 
 	--primary-font: 'Consolas', monospace;
 }
